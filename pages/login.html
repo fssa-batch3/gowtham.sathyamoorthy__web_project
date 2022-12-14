@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>login</title>
+    <style>
+      body {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        background-image: url(./images/grey-luxury-sedan-car-sunset.jpg);
+        background-size: cover;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .box {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 450px;
+        padding: 15px;
+        border: 1px solid goldenrod;
+        border-radius: 15px;
+        margin-left: 70px;
+        margin-top: 40%;
+        gap: 15px;
+        box-shadow: 20px 15px 35px 10px;
+      }
+      input {
+        margin: 5px 0px;
+        height: 30px;
+        padding: 7px;
+        background-color: transparent;
+      }
+
+      button:hover {
+        background-color: black;
+        color: goldenrod;
+        transition: 1s;
+      }
+      .name {
+        color: goldenrod;
+        font-size: 20px;
+      }
+      .button {
+        display: flex;
+      }
+      .btn1 {
+        margin-right: 30px;
+        height: 40px;
+        margin: 5px 0px;
+        background-color: goldenrod;
+        border: none;
+        border-radius: 5px;
+        color: rgb(23, 20, 20);
+        width: 130px;
+        margin-right: 40px;
+      }
+
+      .email {
+        color: goldenrod;
+        font-size: 20px;
+      }
+      .password {
+        color: goldenrod;
+        font-size: 20px;
+      }
+      #id1 {
+        color: white;
+      }
+      #id2 {
+        color: white;
+      }
+      #id3 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="name">
+        <p>Full name</p>
+        <input type="Name" id="id1" placeholder="Name" />
+      </div>
+      <div class="email">
+        <p>Email address</p>
+        <input type="email" id="id2" placeholder="email" />
+      </div>
+      <div class="password">
+        <p>Enter-password</p>
+        <input type="password" id="id3" placeholder="password" />
+      </div>
+
+      <div class="button">
+        <button class="btn1">Forgot password?</button>
+        <button class="btn1">login</button>
+      </div>
+    </div>
+  </body>
+</html>

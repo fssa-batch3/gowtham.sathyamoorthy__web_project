@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@600;700&family=Chivo:ital,wght@0,600;1,600&family=Outfit:wght@500&family=Space+Mono:wght@700&display=swap");
+
+* {
+  font-family: "Barlow", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  display: flex;
+
+  box-shadow: 0px 1px 20px rgb(135, 135, 135);
+}
+.navbar {
+  /* margin-right: 50px; */
+  padding-right: 40px;
+}
+
+.logo img {
+  width: 75px;
+  height: 075px;
+  border-radius: 50px;
+  margin-left: 50px;
+}
+.button {
+  width: 150px;
+  height: 40px;
+  /* margin-right: 100px; */
+  background-color: goldenrod;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-size: 19px;
+}
+button:hover {
+  background-color: black;
+  color: goldenrod;
+  transition: 1s;
+  border: none;
+}
+.head2 {
+  display: flex;
+}
+img {
+  height: 0150px;
+  width: 320px;
+}
+.img1 {
+  height: 0150px;
+  width: 320px;
+}
+.car {
+  background-color: lightgray;
+  border-radius: 20px;
+}
+
+.bike:hover,
+.taxi:hover,
+.porter:hover {
+  background-color: #e2dcc8;
+  transition: 1s;
+  color: #263159;
+  border-radius: 20px;
+}
+.car,
+.bike,
+.taxi,
+.porter {
+  margin: 20px;
+}
+
+.taxipool {
+  font-size: 30px;
+  padding-left: 128px;
+}
+.porter {
+  margin-left: 50px;
+}
+.porterpool {
+  font-size: 30px;
+  padding-left: 60px;
+}
+.carpool {
+  font-size: 30px;
+  margin-left: 100px;
+}
+.bikepool {
+  font-size: 30px;
+  margin-left: 120px;
+}
+.section {
+  display: flex;
+  margin-top: 20px;
+  background-color: #f1f1f1;
+}
+.video {
+  border-radius: 20px;
+  margin-top: 40px;
+  /* margin-right: 40%; */
+  margin-right: 20px;
+}
+.h1 {
+  font-size: 030px;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.btn {
+  margin-top: 40px;
+  margin-left: 40px;
+  width: 200px;
+  height: 60px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  background-color: rgb(46, 119, 246);
+  font-weight: bolder;
+  color: whitesmoke;
+  border-radius: 10px;
+  border: none;
+}
+.img4 {
+  height: 0150px;
+  width: 310px;
+}
+.section2 {
+  font-size: 030px;
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.sec2 {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.carpooling {
+  display: flex;
+  margin-bottom: 40px;
+}
+.carpooling1 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 40px;
+}
+.carpooling2 {
+  display: flex;
+  margin-bottom: 40px;
+}
+.travel1 {
+  margin-left: 30px;
+  margin-top: 40px;
+}
+.route1 {
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+.faster1 {
+  margin-left: 30px;
+  margin-top: 40px;
+}
+.travel {
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  margin-left: 100px;
+}
+.route {
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  margin-right: 70px;
+}
+h3 {
+  font-size: 45px;
+}
+h4 {
+  font-size: 30px;
+}
+.middle {
+  font-size: 23px;
+  margin-top: 20px;
+}
+h5 {
+  margin-left: 40%;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.map1 {
+  width: 350px;
+  height: 550px;
+}
+.map {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+h6 {
+  font-size: 40px;
+  margin-left: 05%;
+  font-weight: bolder;
+}
+.work {
+  margin-left: 05%;
+  font-size: 22px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.working1 {
+  margin-left: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.working2 {
+  margin-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.working3 {
+  margin-left: 95px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.impact {
+  display: flex;
+  justify-content: space-around;
+}
+
+.customer {
+  font-size: 25px;
+  margin-right: 100px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+.ride {
+  font-size: 025px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+.carbon {
+  font-size: 025px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+.men {
+  width: 150px;
+  height: 200px;
+}
+.audi {
+  height: 250px;
+  width: 300px;
+  margin-top: -40px;
+}
+.benz {
+  height: 200px;
+  width: 250px;
+}
+.h6 {
+  margin-bottom: 40px;
+  color: #263159;
+}
+.impact1 {
+  display: flex;
+  margin-left: 30px;
+}
+.impact2 {
+  display: flex;
+  margin-right: 60px;
+}
+.impact3 {
+  display: flex;
+  margin-right: 20px;
+}
+.button1 {
+  margin-left: 35%;
+  width: 250px;
+  height: 50px;
+  border-top-left-radius: 20px;
+}
+.button2 {
+  width: 250px;
+  height: 50px;
+  margin-right: 10%;
+  border-bottom-right-radius: 20px;
+}
+.place {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 15%;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+footer {
+  background-color: #263159;
+}
+.footer {
+  display: flex;
+}
+.footer1 {
+  font-size: 30px;
+  margin-top: 40px;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 20px;
+}
+.footer2 {
+  width: 150px;
+  height: 75px;
+}
+.t2 {
+  border-radius: 50%;
+  width: 150px;
+  height: 140px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.download {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(135, 135, 135);
+}
+.phone {
+  height: 500px;
+  width: 400px;
+}
+.app {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.app1 {
+  font-size: 47px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+.store1 {
+  width: 255px;
+  height: 65px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+.store2 {
+  width: 255px;
+  height: 65px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+.app2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.app3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: blue;
+}
+.download1 {
+  margin-top: 70px;
+}
+.icon1 {
+  width: 50px;
+  height: 30px;
+  margin-left: 15px;
+}
+.address {
+  font-size: 20px;
+  color: #f1f1f1;
+  margin-left: 03%;
+  margin-top: 20px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.icon {
+  margin-left: 1.5%;
+}
+.footer4 {
+  margin-left: 50%;
+  margin-top: -200px;
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.footer5 {
+  margin-left: 70%;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.name {
+  font-size: 30px;
+  font-weight: bolder;
+}

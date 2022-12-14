@@ -1,0 +1,149 @@
+.pickup {
+  text-overflow: ellipsis;
+  border: none;
+  border-bottom: 1px solid rgb(72, 69, 69);
+  width: 430px;
+  margin-top: 20px;
+}
+.drop {
+  text-overflow: ellipsis;
+  border: none;
+  border-bottom: 1px solid rgb(72, 69, 69);
+  width: 430px;
+  margin-top: 20px;
+}
+.value {
+  width: 150px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.green {
+  width: 20px;
+  height: 20px;
+}
+.red {
+  width: 20px;
+  height: 14px;
+}
+.seat {
+  height: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.clock {
+  height: 15px;
+  width: 15px;
+  margin-left: 10px;
+}
+#time {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-top: 20px;
+  width: 19%;
+  margin-left: 10px;
+}
+.btn1 {
+  width: 250px;
+  border-top-left-radius: 15px;
+  height: 30px;
+  font-size: 15px;
+  background-color: green;
+  font-weight: bolder;
+  color: white;
+  border: none;
+}
+.btn2 {
+  width: 250px;
+  border-bottom-right-radius: 15px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.find {
+  width: 400px;
+  margin-left: 45px;
+  margin-top: 10px;
+  height: 35px;
+  font-size: 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: green;
+  font-weight: bolder;
+  color: white;
+}
+.car {
+  width: 200px;
+  margin-top: 10px;
+  height: 45px;
+  margin-left: 30px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+
+  font-size: 20px;
+  border: none;
+  font-weight: bolder;
+}
+.taxi {
+  width: 200px;
+  margin-top: 5px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  border: none;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.container {
+  position: absolute;
+  top: 5%;
+  margin-left: 28%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.taxi:hover {
+  background-color: rgb(239, 192, 71);
+  transition: 1s;
+}
+.car:hover {
+  background-color: rgb(35, 122, 35);
+  color: whitesmoke;
+  transition: 1s;
+}
+body {
+  margin-left: 20px;
+  background-image: url(./images/tabea-schimpf-O7WzqmeYoqc-unsplash.jpg);
+  background-size: cover;
+}
+.honda {
+  background-color: white;
+  width: 504px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+.first {
+  display: flex;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 60px;
+  margin-left: 60px;
+  margin-top: 50px;
+}
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 60px;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: 50px;
+}
