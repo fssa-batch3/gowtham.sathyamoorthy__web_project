@@ -121,7 +121,7 @@
 }
 body {
   margin-left: 20px;
-  background-image: url(./images/tabea-schimpf-O7WzqmeYoqc-unsplash.jpg);
+  background-image: url("../images/tabea-schimpf-O7WzqmeYoqc-unsplash.jpg");
   background-size: cover;
 }
 .honda {

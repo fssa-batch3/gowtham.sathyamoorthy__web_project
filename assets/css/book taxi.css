@@ -81,8 +81,9 @@
   margin-top: 20px;
 }
 body {
-  background-image: url(./images/HD-wallpaper-taxi-rank-cab-rank-taxi-car.jpg);
+  background-image: url(../images/HD-wallpaper-taxi-rank-cab-rank-taxi-car.jpg);
   background-size: cover;
+  background-position: center;
   background-blend-mode: lighten;
 }
 .book {
