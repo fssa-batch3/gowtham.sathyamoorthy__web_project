@@ -7,23 +7,25 @@
 
     <title>login</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@600;700&family=Chivo:ital,wght@0,600;1,600&family=Outfit:wght@500&family=Space+Mono:wght@700&display=swap");
       body {
         height: 300px;
         display: flex;
         align-items: center;
         justify-content: start;
-        background-image: url(./images/grey-luxury-sedan-car-sunset.jpg);
+        background-image: url(../assets/images/grey-luxury-sedan-car-sunset.jpg);
         background-size: cover;
-        font-family: "Courier New", Courier, monospace;
+        font-family: "Barlow", sans-serif;
       }
       .box {
         background-color: black;
         display: flex;
         flex-direction: column;
-        width: 300px;
-        height: 450px;
+        width: 400px;
+        height: 650px;
         padding: 15px;
-        border: 1px solid goldenrod;
+        border: 2px solid goldenrod;
+        border-left: 3px solid goldenrod;
         border-radius: 15px;
         margin-left: 70px;
         margin-top: 40%;
@@ -45,9 +47,13 @@
       .name {
         color: goldenrod;
         font-size: 20px;
+        margin-top: -5%;
+
+        margin-left: 50px;
       }
       .button {
         display: flex;
+        margin-left: 50px;
       }
       .btn1 {
         margin-right: 30px;
@@ -64,24 +70,59 @@
       .email {
         color: goldenrod;
         font-size: 20px;
+        margin-left: 50px;
       }
       .password {
         color: goldenrod;
         font-size: 20px;
+        margin-left: 50px;
       }
       #id1 {
-        color: white;
+        color: goldenrod;
+        border-bottom: 3px solid goldenrod;
+        border-right: 3px solid goldenrod;
       }
       #id2 {
-        color: white;
+        color: goldenrod;
+        border-bottom: 3px solid goldenrod;
+        border-right: 3px solid goldenrod;
       }
       #id3 {
-        color: white;
+        color: goldenrod;
+        border-bottom: 3px solid goldenrod;
+        border-right: 3px solid goldenrod;
+      }
+      .photo {
+        width: 100px;
+        height: 100px;
+        margin-left: 150px;
+        margin-top: -22px;
+      }
+      h1 {
+        color: goldenrod;
+        margin-left: 125px;
+        font-weight: bolder;
+        margin-top: -2%;
+      }
+      .sign a {
+        margin-left: 50px;
+        color: goldenrod;
+      }
+      ::placeholder {
+        color: goldenrod;
       }
     </style>
   </head>
   <body>
     <div class="box">
+      <div class="logo">
+        <img
+          src="../assets/images/profile-removebg-preview.png"
+          alt="image"
+          class="photo"
+        />
+        <h1>Login Here</h1>
+      </div>
       <div class="name">
         <p>Full name</p>
         <input type="Name" id="id1" placeholder="Name" />
@@ -98,6 +139,9 @@
       <div class="button">
         <button class="btn1">Forgot password?</button>
         <button class="btn1">login</button>
+      </div>
+      <div class="sign">
+        <a href="./sign-in.html">Dont have an account ?</a>
       </div>
     </div>
   </body>
