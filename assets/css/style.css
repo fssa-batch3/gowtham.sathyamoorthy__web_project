@@ -14,7 +14,7 @@ header {
 
   box-shadow: 0px 1px 20px rgb(135, 135, 135);
 
-  background-color: #395b64;
+  background-color: rgb(22, 21, 21);
 }
 .navbar {
   /* margin-right: 50px; */
@@ -45,12 +45,6 @@ button:hover {
 }
 .head2 {
   display: flex;
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
 img {
   height: 0150px;
@@ -61,16 +55,16 @@ img {
   width: 320px;
 }
 .car {
-  background-color: lightgray;
+  background-color: goldenrod;
   border-radius: 20px;
 }
 
 .bike:hover,
 .taxi:hover,
 .porter:hover {
-  background-color: #e2dcc8;
+  background-color: goldenrod;
   transition: 1s;
-  color: #263159;
+  color: black;
   border-radius: 20px;
 }
 .car,
@@ -94,6 +88,7 @@ img {
 .carpool {
   font-size: 30px;
   margin-left: 100px;
+  color: black;
 }
 .bikepool {
   font-size: 30px;
@@ -102,12 +97,6 @@ img {
 .section {
   display: flex;
   margin-top: 20px;
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
 .video {
   border-radius: 20px;
@@ -142,12 +131,6 @@ img {
   margin-left: 40px;
   margin-top: 30px;
   margin-bottom: 60px;
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
 .sec2 {
   font-size: 25px;
@@ -156,27 +139,16 @@ img {
 .carpooling {
   display: flex;
   margin-bottom: 40px;
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
 .carpooling1 {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   margin-bottom: 40px;
+  height: 300px;
 }
 .carpooling2 {
   display: flex;
   margin-bottom: 40px;
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
 .travel1 {
   margin-left: 30px;
@@ -185,12 +157,6 @@ img {
 .route1 {
   margin-left: 100px;
   margin-top: 40px;
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
 
 .faster1 {
@@ -208,12 +174,15 @@ img {
   height: 300px;
   border-radius: 20px;
   margin-right: 70px;
+  background-color: rgba(212, 175, 55, 1);
 }
 h3 {
   font-size: 45px;
+  margin-bottom: 35px;
 }
 h4 {
   font-size: 30px;
+  margin-bottom: 30px;
 }
 .middle {
   font-size: 23px;
@@ -244,6 +213,7 @@ h6 {
   margin-bottom: 40px;
   font-weight: bold;
 }
+
 .working1 {
   margin-left: 30px;
   font-size: 25px;
@@ -262,12 +232,6 @@ h6 {
 .impact {
   display: flex;
   justify-content: space-around;
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
 
 .customer {
@@ -301,7 +265,7 @@ h6 {
 }
 .h6 {
   margin-bottom: 40px;
-  color: #263159;
+  color: gold;
 }
 .impact1 {
   display: flex;
@@ -320,12 +284,17 @@ h6 {
   width: 250px;
   height: 50px;
   border-top-left-radius: 20px;
+  background-color: gold;
+  font-size: 20px;
 }
 .button2 {
   width: 250px;
   height: 50px;
   margin-right: 10%;
   border-bottom-right-radius: 20px;
+  font-size: 20px;
+  background-color: black;
+  color: gold;
 }
 .place {
   font-size: 30px;
@@ -370,12 +339,6 @@ footer {
 .download {
   display: flex;
   justify-content: space-around;
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
 .phone {
   height: 500px;
@@ -480,16 +443,10 @@ ul {
   font-size: 30px;
   font-weight: bolder;
 }
-.working {
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
-}
+
 body {
-  background-color: rgb(22, 22, 22);
+  background-color: #141415;
+  color: goldenrod;
 }
 .facility {
   display: flex;
@@ -531,12 +488,4 @@ body {
   font-weight: bold;
   margin-top: 15px;
   margin-right: 30px;
-}
-.class {
-  background: rgb(58, 59, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 59, 60, 1) 47%,
-    rgba(212, 175, 55, 1) 58%
-  );
 }
