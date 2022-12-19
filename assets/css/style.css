@@ -45,11 +45,11 @@ button:hover {
 }
 .head2 {
   display: flex;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 img {
@@ -102,11 +102,11 @@ img {
 .section {
   display: flex;
   margin-top: 20px;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
-    234deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    90deg,
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 .video {
@@ -142,11 +142,11 @@ img {
   margin-left: 40px;
   margin-top: 30px;
   margin-bottom: 60px;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 .sec2 {
@@ -156,11 +156,11 @@ img {
 .carpooling {
   display: flex;
   margin-bottom: 40px;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
-    234deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    90deg,
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 .carpooling1 {
@@ -171,11 +171,11 @@ img {
 .carpooling2 {
   display: flex;
   margin-bottom: 40px;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 .travel1 {
@@ -185,11 +185,11 @@ img {
 .route1 {
   margin-left: 100px;
   margin-top: 40px;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 
@@ -262,11 +262,11 @@ h6 {
 .impact {
   display: flex;
   justify-content: space-around;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
-    234deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    90deg,
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 
@@ -370,11 +370,11 @@ footer {
 .download {
   display: flex;
   justify-content: space-around;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
-    234deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    90deg,
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 .phone {
@@ -481,11 +481,11 @@ ul {
   font-weight: bolder;
 }
 .working {
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
 body {
@@ -533,10 +533,10 @@ body {
   margin-right: 30px;
 }
 .class {
-  background: rgb(0, 0, 0);
+  background: rgb(58, 59, 60);
   background: linear-gradient(
-    234deg,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(212, 175, 55, 1) 86%
+    90deg,
+    rgba(58, 59, 60, 1) 47%,
+    rgba(212, 175, 55, 1) 58%
   );
 }
