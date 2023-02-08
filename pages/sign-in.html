@@ -21,13 +21,13 @@
         display: flex;
         flex-direction: column;
         width: 400px;
-        height: 650px;
+        height: 700px;
         padding: 15px;
         border: 2px solid aquamarine;
         border-left: 3px solid aquamarine;
         border-radius: 15px;
         margin-left: 70px;
-        margin-top: 40%;
+        margin-top: 35%;
         gap: 15px;
         box-shadow: 20px 15px 35px 10px;
       }
@@ -35,16 +35,26 @@
         color: aquamarine;
         border-bottom: 3px solid aquamarine;
         border-right: 3px solid aquamarine;
+
+        outline-style: none;
       }
       #id2 {
         color: aquamarine;
         border-bottom: 3px solid aquamarine;
         border-right: 3px solid aquamarine;
+        outline-style: none;
       }
       #id3 {
         color: aquamarine;
         border-bottom: 3px solid aquamarine;
         border-right: 3px solid aquamarine;
+        outline-style: none;
+      }
+      #id4 {
+        color: aquamarine;
+        border-bottom: 3px solid aquamarine;
+        border-right: 3px solid aquamarine;
+        outline-style: none;
       }
       .name {
         color: aquamarine;
@@ -52,16 +62,19 @@
         margin-top: -5%;
 
         margin-left: 50px;
+        margin-bottom: 20px;
       }
       .mobile {
         color: aquamarine;
         font-size: 20px;
         margin-left: 50px;
+        margin-bottom: 20px;
       }
       .otp {
         color: aquamarine;
         font-size: 20px;
         margin-left: 50px;
+        margin-bottom: 20px;
       }
       .photo {
         width: 75px;
@@ -69,6 +82,12 @@
         margin-left: 170px;
         margin-top: -5px;
         border-radius: 50%;
+      }
+      .email {
+        color: aquamarine;
+        font-size: 20px;
+        margin-left: 50px;
+        margin-bottom: 20px;
       }
       h1 {
         color: aquamarine;
@@ -82,7 +101,9 @@
         height: 30px;
         padding: 7px;
         background-color: transparent;
+        border-color: none;
       }
+
       button {
         width: 350px;
         height: 30px;
@@ -91,6 +112,15 @@
         background-color: transparent;
         color: aquamarine;
         border: 2px solid aquamarine;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: aquamarine;
+        color: black;
+        transition: 0.5s;
       }
     </style>
   </head>
@@ -101,21 +131,55 @@
         <img src="../assets/images/user.png" alt="image" class="photo" />
         <h1>Sign-in Here</h1>
       </div>
-      <div class="name">
-        <p>Full name</p>
-        <input type="Name" id="id1" placeholder="Name" />
-      </div>
-      <div class="mobile">
-        <p>Mobile-no</p>
-        <input type="number" id="id2" placeholder="mobile" />
-      </div>
-      <div class="otp">
-        <p>Enter-OTP</p>
-        <input type="number" id="id3" placeholder="4-digit" />
-      </div>
-      <div class="main-page">
-        <a href="../index.html"><button>Log-in</button></a>
-      </div>
+      <form id="sign_in information">
+        <div class="name">
+          <label>Full-name</label><br />
+          <input type="Name" id="id1" placeholder="Name" />
+        </div>
+        <div class="email">
+          <label>Email-id</label><br />
+          <input type="text" id="id2" placeholder="Email-id" />
+        </div>
+
+        <div class="mobile">
+          <label>Phone-Number</label><br />
+          <input type="number" id="id3" placeholder="mobile" />
+        </div>
+        <div class="otp">
+          <label>password</label><br />
+          <input type="number" id="id4" placeholder="password" />
+        </div>
+        <div class="main-page">
+          <a href="../index.html"><button>Log-in</button></a>
+        </div>
+      </form>
     </div>
+
+    <script>
+      // assign the variable//
+      const signupform = document.getElementById("sign_in information");
+
+      // array
+      const users = [];
+      // function
+      signupform.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const user_name = document.getElementById("id1").value;
+        const user_email = document.getElementById("id2").value;
+        const user_number = document.getElementById("id3").value;
+        const user_password = document.getElementById("id4").value;
+
+        let user_data = { user_name, user_email, user_number, user_password };
+        console.log(user_data);
+
+        users.push(user_data);
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Account Created Successfully");
+      });
+      let get_data = JSON.parse(localStorage.getItem("users"));
+      console.log(get_data);
+    </script>
   </body>
 </html>

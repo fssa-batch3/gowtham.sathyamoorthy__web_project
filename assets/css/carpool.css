@@ -123,11 +123,7 @@
   color: whitesmoke;
   transition: 1s;
 }
-body {
-  margin-left: 20px;
-  background-image: url("../images/tabea-schimpf-O7WzqmeYoqc-unsplash.jpg");
-  background-size: cover;
-}
+
 .honda {
   background-color: white;
   width: 504px;
@@ -151,12 +147,54 @@ h2 {
   font-weight: bolder;
   margin-top: 50px;
 }
+.footer1 {
+  font-size: 30px;
+  margin-top: 40px;
+  font-weight: bolder;
+  font-style: italic;
+
+  margin-left: 20px;
+}
+.footer2 {
+  width: 150px;
+  margin-left: 25px;
+  margin-top: 70px;
+  color: red;
+  font-size: 25px;
+  font-weight: bolder;
+}
+.footer7 {
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 70px;
+  margin-top: -20px;
+}
+.address {
+  font-size: 20px;
+  color: white;
+  margin-left: 03%;
+  margin-top: 20px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.t2 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+footer {
+  background-color: #070707;
+}
+.footer {
+  display: flex;
+}
 .icon1 {
   width: 50px;
   height: 30px;
   margin-left: 15px;
 }
-.address {
+.address p {
   font-size: 20px;
   color: gold;
   margin-left: 03%;
@@ -185,6 +223,7 @@ h2 {
   font-size: 20px;
   font-weight: bolder;
   color: gold;
+  cursor: pointer;
 }
 .footer5 {
   margin-left: 05%;
@@ -204,39 +243,9 @@ h2 {
   padding-top: 10px;
 }
 ul {
-  padding: 5px;
+  padding: 3px;
 }
-footer {
-  background-color: black;
-}
-.footer {
-  display: flex;
-}
-.footer1 {
-  font-size: 30px;
-  margin-top: 40px;
-  font-weight: bolder;
-  font-style: italic;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  margin-left: 20px;
-}
-.footer2 {
-  width: 150px;
-  margin-left: 25px;
-  margin-top: 70px;
-  color: red;
-  font-size: 25px;
-  font-weight: bolder;
-}
-.footer7 {
-  color: aliceblue;
-  font-weight: bold;
-}
-.address {
-  font-size: 20px;
-  color: gold;
-  margin-left: 03%;
-  margin-top: 20px;
-  font-weight: bolder;
-  margin-bottom: 20px;
+.back {
+  background-image: url("../images/tabea-schimpf-O7WzqmeYoqc-unsplash.jpg");
+  background-size: cover;
 }

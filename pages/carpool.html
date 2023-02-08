@@ -8,73 +8,81 @@
     <title>carpool</title>
   </head>
   <body>
-    <div>
-      <a href="./login.html"><button class="container">login</button></a>
-    </div>
-    <!-- this part is embeded by google maps -->
-    <div class="first">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15551.75866629963!2d80.24239903251019!3d12.975710753649992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d6d804e0793%3A0xf310a6ebd244b2d0!2sGlobal%20Infocity%20Park%2C%20Ambedkar%20Nagar%2C%20Perungudi%2C%20Chennai%2C%20Tamil%20Nadu%20600096!5e0!3m2!1sen!2sin!4v1670767794796!5m2!1sen!2sin"
-        width="500"
-        height="580"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <!-- section-1 -->
+    <div class="back">
       <div>
-        <h1>Turbo-Trip is India's largest <br />Carpooling network</h1>
-        <h2>
-          Download Turbo-Trip App to manage your ride with better experience
-        </h2>
+        <a href="./login.html"><button class="container">login</button></a>
       </div>
-    </div>
-    <!-- this section is booking a taxi  -->
-    <div class="honda">
-      <div class="btn">
-        <button class="btn1">find ride</button>
-        <button class="btn2">offer ride</button>
+      <!-- this part is embeded by google maps -->
+      <div class="first">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15551.75866629963!2d80.24239903251019!3d12.975710753649992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d6d804e0793%3A0xf310a6ebd244b2d0!2sGlobal%20Infocity%20Park%2C%20Ambedkar%20Nagar%2C%20Perungudi%2C%20Chennai%2C%20Tamil%20Nadu%20600096!5e0!3m2!1sen!2sin!4v1670767794796!5m2!1sen!2sin"
+          width="500"
+          height="580"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          >Choose your place</iframe
+        >
+        <!-- section-1 -->
+        <div>
+          <h1>Turbo-Trip is India's largest <br />Carpooling network</h1>
+          <h2>
+            Download Turbo-Trip App to manage your ride with better experience
+          </h2>
+        </div>
       </div>
-      <div>
-        <img
-          src="../assets/images/hd-green-dot-circle-icon-11642066802ysgbn4cpvp-removebg-preview.png"
-          alt="green dot"
-          class="green"
-        />
-        <input class="pickup" placeholder="Enter pickup address" /><br />
-      </div>
+      <!-- this section is booking a taxi  -->
+      <div class="honda">
+        <div class="btn">
+          <button class="btn1">find ride</button>
+          <button class="btn2">offer ride</button>
+        </div>
+        <div>
+          <img
+            src="../assets/images/hd-green-dot-circle-icon-11642066802ysgbn4cpvp-removebg-preview.png"
+            alt="green dot"
+            class="green"
+          />
+          <label for="enter address"></label>
+          <input class="pickup" placeholder="Enter pickup address" /><br />
+        </div>
 
-      <div>
-        <img
-          src="../assets/images/r_circle-removebg-preview.png"
-          alt="red dot"
-          class="red"
-        />
-        <input class="drop" placeholder="Enter drop address" /><br />
-      </div>
-      <div>
-        <img
-          src="../assets/images/clock-removebg-preview.png"
-          alt="clock"
-          class="clock"
-        />
-        <input type="datetime-local" id="time" name="select pickup time" />
-        <img src="../assets/images/ic_seat.png" alt="seat" class="seat" />
-        <select class="value">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <div>
-        <a href="./login.html"><button class="find">Find ride</button></a>
-      </div>
-      <div>
-        <a href="../index.html"><button class="car">Carpool</button></a>
-        <a href="../pages/book taxi.html"><button class="taxi">Taxi</button></a>
+        <div>
+          <img
+            src="../assets/images/r_circle-removebg-preview.png"
+            alt="red dot"
+            class="red"
+          />
+          <label for="drop address"></label>
+          <input class="drop" placeholder="Enter drop address" /><br />
+        </div>
+        <div>
+          <img
+            src="../assets/images/clock-removebg-preview.png"
+            alt="clock"
+            class="clock"
+          />
+          <label for="date"></label>
+          <input type="datetime-local" id="time" name="select pickup time" />
+          <img src="../assets/images/ic_seat.png" alt="seat" class="seat" />
+          <select class="value">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div>
+          <a href="./login.html"><button class="find">Find ride</button></a>
+        </div>
+        <div>
+          <a href="../index.html"><button class="car">Carpool</button></a>
+          <a href="../pages/book taxi.html"
+            ><button class="taxi">Taxi</button></a
+          >
+        </div>
       </div>
     </div>
     <footer>
@@ -132,23 +140,23 @@
         <div class="icon">
           <p class="icon2">Follow us :</p>
           <img
-            src="./assets/images/facebook.png"
+            src="../assets/images/facebook.png"
             alt="facebook"
             class="icon1"
           />
           <img
-            src="./assets/images/instagram.png"
+            src="../assets/images/instagram.png"
             alt="instagram"
             class="icon1"
           />
-          <img src="./assets/images/twitter.png" alt="twitter" class="icon1" />
+          <img src="../assets/images/twitter.png" alt="twitter" class="icon1" />
           <img
-            src="./assets/images/telegram.png"
+            src="../assets/images/telegram.png"
             alt="telegram"
             class="icon1"
           />
           <img
-            src="./assets/images/whatsapp-111.png"
+            src="../assets/images/whatsapp-111.png"
             alt="linkedin"
             class="icon1"
           />

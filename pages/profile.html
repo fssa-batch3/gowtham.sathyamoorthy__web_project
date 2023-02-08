@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile.html</title>
+  </head>
+  <body>
+    <h1>Profile-page</h1>
+    <div class="sign_m">
+      <div class="input-group">
+        <input
+          required=""
+          type="text"
+          name="text"
+          autocomplete="off"
+          class="input"
+          id="P_name"
+        />
+        <label class="user-label"> Name</label>
+      </div>
+      <div class="input-group">
+        <input
+          required=""
+          type="email"
+          name="text"
+          autocomplete="off"
+          class="input"
+          id="P_mail"
+        />
+        <label class="user-label">Email-id</label>
+      </div>
+      <div class="input-group">
+        <input
+          required=""
+          type="number"
+          name="text"
+          autocomplete="off"
+          class="input"
+          id="P_number"
+        />
+        <label class="user-label">Phone-Number</label>
+      </div>
+      <div class="input-group">
+        <input
+          required=""
+          type="password"
+          name="text"
+          autocomplete="off"
+          class="input"
+          id="P_password"
+        />
+        <label class="user-label">password</label>
+      </div>
+    </div>
+    <script>
+      let profiledata = JSON.parse(localStorage.getItem("profile"));
+      let name = (document.getElementById("P_name").value =
+        profiledata["user_name"]);
+      let email = (document.getElementById("P_mail").value =
+        profiledata["user_email"]);
+      let number = (document.getElementById("P_number").value =
+        profiledata["user_number"]);
+      let password = (document.getElementById("P_password").value =
+        profiledata["user_password"]);
+    </script>
+  </body>
+</html>

@@ -40,23 +40,100 @@
           confrimed !
         </div>
 
-        <div class="footer">
+        <!-- <div class="footer">
           <div>
             <img
               src="../assets/images/valerie-kaarna-YsutjEqmLWo-unsplash.jpg"
-              alt="driver1"
+              alt="driver2"
               class="driver1"
             />
           </div>
           <!-- the driver information -->
-          <div>
+        <!-- <div>
             <h1>Name: Jonny</h1>
             <h2>Car: swift-dzire</h2>
             <p>He will arrive at with in 15 mins</p>
             <h3>Contact us : +919551555231</h3>
           </div>
-        </div>
+        </div>  -->
       </div>
     </div>
+
+    <div class="whole"></div>
+    <script>
+      let drivers = [
+        {
+          driver_name: " driver_name:Jonny ",
+          car: "car:Swift-dzire",
+          image: "../assets/images/valerie-kaarna-YsutjEqmLWo-unsplash.jpg",
+          alt: "driver2",
+          contact: " contact: +919551555231",
+          description: "He will arrive at with in 15 mins",
+        },
+
+        {
+          driver_name: " Driver_name:Jonny  ",
+          car: "Swift-dzire",
+          image: "../assets/images/valerie-kaarna-YsutjEqmLWo-unsplash.jpg",
+          alt: "driver2",
+          contact: +919551555231,
+          description: "He will arrive at with in 15 mins",
+        },
+
+        {
+          driver_name: " Driver_name:Jonny  ",
+          car: "Swift-dzire",
+          image: "../assets/images/valerie-kaarna-YsutjEqmLWo-unsplash.jpg",
+          alt: "driver2",
+          contact: +919551555231,
+          description: "He will arrive at with in 15 mins",
+        },
+      ];
+
+      let card_div;
+      let small_div;
+      let card_img;
+      let details_div;
+      let name;
+      let type_car;
+      let para;
+      let contact;
+
+      for (let i = 0; i < drivers.length; i++) {
+        card_div = document.createElement("div");
+        card_div.setAttribute("class", "footer");
+        console.log(card_div);
+
+        small_div = document.createElement("div");
+        card_div.append(small_div);
+
+        card_img = document.createElement("img");
+        card_img.setAttribute("class", "driver1");
+        card_img.setAttribute("src", drivers[i]["image"]);
+        card_img.setAttribute("alt", drivers[i]["alt"]);
+        small_div.append(card_img);
+
+        details_div = document.createElement("div");
+        card_div.append(details_div);
+
+        name = document.createElement("h1");
+        name.innerText = drivers[i]["driver_name"];
+        details_div.append(name);
+
+        type_car = document.createElement("h2");
+        type_car.innerText = drivers[i]["car"];
+        details_div.append(type_car);
+
+        para = document.createElement("p");
+        para.innerText = drivers[i]["description"];
+        details_div.append(para);
+
+        contact = document.createElement("h3");
+        contact.innerText = drivers[i]["contact"];
+        details_div.append(contact);
+
+        document.querySelector(".jonny").append(card_div);
+      }
+    </script>
   </body>
 </html>
