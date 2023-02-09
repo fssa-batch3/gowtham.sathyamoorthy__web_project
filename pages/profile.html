@@ -16,7 +16,7 @@
           name="text"
           autocomplete="off"
           class="input"
-          id="P_name"
+          id="Profile_name"
         />
         <label class="user-label"> Name</label>
       </div>
@@ -27,7 +27,7 @@
           name="text"
           autocomplete="off"
           class="input"
-          id="P_mail"
+          id="Profile_mail"
         />
         <label class="user-label">Email-id</label>
       </div>
@@ -38,7 +38,7 @@
           name="text"
           autocomplete="off"
           class="input"
-          id="P_number"
+          id="Profile_number"
         />
         <label class="user-label">Phone-Number</label>
       </div>
@@ -49,20 +49,20 @@
           name="text"
           autocomplete="off"
           class="input"
-          id="P_password"
+          id="Profile_password"
         />
         <label class="user-label">password</label>
       </div>
     </div>
     <script>
       let profiledata = JSON.parse(localStorage.getItem("profile"));
-      let name = (document.getElementById("P_name").value =
+      let name = (document.getElementById("Profile_name").value =
         profiledata["user_name"]);
-      let email = (document.getElementById("P_mail").value =
+      let email = (document.getElementById("Profile_mail").value =
         profiledata["user_email"]);
-      let number = (document.getElementById("P_number").value =
+      let number = (document.getElementById("Profile_number").value =
         profiledata["user_number"]);
-      let password = (document.getElementById("P_password").value =
+      let password = (document.getElementById("Profile_password").value =
         profiledata["user_password"]);
     </script>
   </body>

@@ -11,6 +11,8 @@
     />
     <title>book taxi</title>
   </head>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <body>
     <!-- this is embeded by the google maps -->
     <div class="background">
@@ -82,13 +84,15 @@
           />
         </div>
       </div>
-      <div class="mobile img">
+      <!-- <div > -->
+      <div class="mobile img" data-aos="fade-left" data-aos-duration="800">
         <img
           src="/assets/images/taxi_mobile_image-removebg-preview.png"
           alt="mobile-taxi"
           class="taxi-1"
         />
       </div>
+      <!-- </div> -->
     </div>
     <!-- section-2  why turbo trip call taxi -->
     <div class="section2">
@@ -190,4 +194,7 @@
       </div>
     </footer>
   </body>
+  <script>
+    AOS.init();
+  </script>
 </html>

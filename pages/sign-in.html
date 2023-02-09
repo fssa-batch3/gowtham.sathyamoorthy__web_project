@@ -129,25 +129,43 @@
     <div class="box">
       <div class="logo">
         <img src="../assets/images/user.png" alt="image" class="photo" />
-        <h1>Sign-in Here</h1>
+        <h1>Sign-up Here</h1>
       </div>
       <form id="sign_in information">
         <div class="name">
           <label>Full-name</label><br />
-          <input type="Name" id="id1" placeholder="Name" />
+          <input
+            type="Name"
+            title="Please enter your name "
+            id="id1"
+            placeholder="Name"
+          />
         </div>
         <div class="email">
           <label>Email-id</label><br />
-          <input type="text" id="id2" placeholder="Email-id" />
+          <input type="email" id="id2" placeholder="Email-id" />
         </div>
 
         <div class="mobile">
           <label>Phone-Number</label><br />
-          <input type="number" id="id3" placeholder="mobile" />
+          <input
+            type="number"
+            pattern="[0-9]"
+            maxlength="10"
+            id="id3"
+            placeholder="mobile"
+          />
         </div>
         <div class="otp">
           <label>password</label><br />
-          <input type="number" id="id4" placeholder="password" />
+          <input
+            type="password"
+            title=""
+            pattern="[A-Za-z0-9]"
+            id="id4"
+            title="Please ENter Your Password"
+            placeholder="password"
+          />
         </div>
         <div class="main-page">
           <a href="../index.html"><button>Log-in</button></a>
@@ -164,10 +182,25 @@
       // function
       signupform.addEventListener("submit", function (event) {
         event.preventDefault();
-        const user_name = document.getElementById("id1").value;
-        const user_email = document.getElementById("id2").value;
-        const user_number = document.getElementById("id3").value;
-        const user_password = document.getElementById("id4").value;
+        const user_name = document.getElementById("id1").value.trim();
+        const user_email = document.getElementById("id2").value.trim();
+        const user_number = document.getElementById("id3").value.trim();
+        const user_password = document.getElementById("id4").value.trim();
+
+        if (user_name == "" || user_name === null) {
+          alert("please enter your name correctly!");
+          return false;
+        } else if (user_email == "" || user_email == null) {
+          alert("please enter your email!");
+          return false;
+        }
+        if ((user_number.length = 10)) {
+          alert("phone number should 10 number!");
+          return false;
+        } else if (user_password.length < 6) {
+          alert("password should be 6 numbers!");
+          return false;
+        }
 
         let user_data = { user_name, user_email, user_number, user_password };
         console.log(user_data);
