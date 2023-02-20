@@ -26,7 +26,7 @@
         border: 2px solid aquamarine;
         border-left: 3px solid aquamarine;
         border-radius: 15px;
-        margin-left: 70px;
+        margin-left: 60px;
         margin-top: 35%;
         gap: 15px;
         box-shadow: 20px 15px 35px 10px;
@@ -56,6 +56,12 @@
         border-right: 3px solid aquamarine;
         outline-style: none;
       }
+      #id5 {
+        color: aquamarine;
+        border-bottom: 3px solid aquamarine;
+        border-right: 3px solid aquamarine;
+        outline-style: none;
+      }
       .name {
         color: aquamarine;
         font-size: 20px;
@@ -74,7 +80,7 @@
         color: aquamarine;
         font-size: 20px;
         margin-left: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 05px;
       }
       .photo {
         width: 75px;
@@ -161,14 +167,26 @@
           <input
             type="password"
             title=""
-            pattern="[A-Za-z0-9]"
             id="id4"
             title="Please ENter Your Password"
             placeholder="password"
           />
         </div>
+        <div class="otp">
+          <label>confirm password</label><br />
+          <input
+            type="password"
+            title=""
+            id="id5"
+            title="Please ENter Your Password"
+            placeholder="confirm password"
+          />
+        </div>
         <div class="main-page">
-          <a href="../index.html"><button>Log-in</button></a>
+          <!-- <a href="../index.html">
+            <button>Sign-up</button>
+          </a> -->
+          <button>Sign-up</button>
         </div>
       </form>
     </div>
@@ -176,43 +194,56 @@
     <script>
       // assign the variable//
       const signupform = document.getElementById("sign_in information");
-
-      // array
-      const users = [];
-      // function
       signupform.addEventListener("submit", function (event) {
+        // array
+        let users = [];
+        // function
+        if (localStorage.getItem("users") != null) {
+          users = JSON.parse(localStorage.getItem("users"));
+        }
         event.preventDefault();
-        const user_name = document.getElementById("id1").value.trim();
-        const user_email = document.getElementById("id2").value.trim();
-        const user_number = document.getElementById("id3").value.trim();
-        const user_password = document.getElementById("id4").value.trim();
 
-        if (user_name == "" || user_name === null) {
-          alert("please enter your name correctly!");
-          return false;
-        } else if (user_email == "" || user_email == null) {
-          alert("please enter your email!");
-          return false;
-        }
-        if ((user_number.length = 10)) {
-          alert("phone number should 10 number!");
-          return false;
-        } else if (user_password.length < 6) {
-          alert("password should be 6 numbers!");
-          return false;
-        }
-
-        let user_data = { user_name, user_email, user_number, user_password };
+        const user_name = document.getElementById("id1").value;
+        const user_email = document.getElementById("id2").value;
+        const user_number = document.getElementById("id3").value;
+        const user_password = document.getElementById("id4").value;
+        const user_confrimpassword = document.getElementById("id5").value;
+        let validation_error = false;
+        let user_data = {
+          user_name,
+          user_email,
+          user_number,
+          user_password,
+          user_confrimpassword,
+        };
         console.log(user_data);
 
-        users.push(user_data);
+        if (user_password != user_confrimpassword) {
+          validation_error = true;
+          alert("Confrim password is in correct!");
+          return false;
+        }
+        const select_user = users.find(function (users) {
+          const cus_phone = users["user_number"];
+          const cus_email = users["user_email"];
 
-        localStorage.setItem("users", JSON.stringify(users));
-
-        alert("Account Created Successfully");
+          if (user_number === cus_phone) {
+            validation_error = true;
+            alert("user already present please change Number");
+            return fasle;
+          }
+          return false;
+        });
+        if (!validation_error) {
+          users.push(user_data);
+          localStorage.setItem("users", JSON.stringify(users));
+          localStorage.setItem("userEmail", JSON.stringify(user_email));
+          console.log(users);
+          alert("Account Created Successfully");
+        }
       });
-      let get_data = JSON.parse(localStorage.getItem("users"));
-      console.log(get_data);
+      //   let get_data = JSON.parse(localStorage.getItem("users"));
+      //   console.log(get_data);
     </script>
   </body>
 </html>
