@@ -208,6 +208,7 @@
         const user_number = document.getElementById("id3").value;
         const user_password = document.getElementById("id4").value;
         const user_confrimpassword = document.getElementById("id5").value;
+        const user_id = Date.now();
         let validation_error = false;
         let user_data = {
           user_name,
@@ -215,6 +216,7 @@
           user_number,
           user_password,
           user_confrimpassword,
+          user_id,
         };
         console.log(user_data);
 
