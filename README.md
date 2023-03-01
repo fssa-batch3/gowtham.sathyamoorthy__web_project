@@ -27,9 +27,9 @@ CRUD For User signning page
 
 CRUD For User Features page
 
-=> Create products card/list [pending]
+=> Create products card/list [completed] end_date (28-02-2023)
 
-=> Read Product Data For card [pending]
+=> Read Product Data For card [completed] end_date(28-02-2023)
 
 => Update user details For card [pending]
 
