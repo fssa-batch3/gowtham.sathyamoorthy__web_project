@@ -10,3 +10,27 @@ User flow: https://drive.google.com/drive/u/0/folders/17k9_U8LnZPCSmOvjvBMJECO5i
 Wireframe: https://drive.google.com/drive/u/0/folders/17k9_U8LnZPCSmOvjvBMJECO5ic1_YKPa
 
 Sonar Cloud:https://sonarcloud.io/project/overview?id=fssa-batch3_gowtham.sathyamoorthy__web_project
+
+In java script wrok:
+
+// My Progress Table
+
+CRUD For User signning page
+
+=> Create user account [completed]
+
+=> Read User Data For Profile Page [completed]
+
+=> Update user details For Edit Page [completed]
+
+=> Delete user details For deactivate [completed]
+
+CRUD For User Features page
+
+=> Create products card/list [completed] end_date (28-02-2023)
+
+=> Read Product Data For card [completed] end_date(28-02-2023)
+
+=> Update user details For card [pending]
+
+=> Deactivate Product details For Card [pending]
