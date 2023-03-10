@@ -31,6 +31,6 @@ CRUD For User Features page
 
 => Read Product Data For card [completed] end_date(28-02-2023)
 
-=> Update user details For card [pending]
+=> Update user details For card [completed] end_date(03-03-2023)
 
-=> Deactivate Product details For Card [pending]
+=> Deactivate Product details For Card [completed] end_date(03-03-2023)
