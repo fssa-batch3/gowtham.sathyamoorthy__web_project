@@ -83,7 +83,7 @@
   margin-left: 50px;
   outline: none;
 }
-#States {
+#states {
   width: 100%;
   padding: 8px;
   font-size: 14px;
@@ -104,7 +104,7 @@
 
 .btn {
   padding: 12px 24px;
-  margin-left: 50px;
+  margin-top: 60px;
   font-size: 16px;
   border: none;
   border-radius: 4px;
@@ -113,6 +113,8 @@
   text-transform: uppercase;
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
+  width: 200px;
+  height: 50px;
 }
 
 .btn:hover {

@@ -188,6 +188,7 @@
             checkin = true;
             if (pass === password) {
               alert("success");
+              window.location.href = "../pages/openingpage.html";
               return checkin;
             }
             alert("incorrect password");
@@ -203,7 +204,6 @@
           "profile",
           JSON.stringify(driverData["Driver_email"])
         );
-        window.location.href = "index.html";
       });
     </script>
   </body>
