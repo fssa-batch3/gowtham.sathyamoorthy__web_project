@@ -1,0 +1,24 @@
+{
+  "name": "gowtham.sathyamoorthy__web_project",
+  "version": "1.0.0",
+  "description": "In This website we use to one place to another place,We all like going together. Turbo trip will help you to connect with other like-minded professionals who are traveling on the same route and same time. Turbo trip helps commuters to start sharing the ride instead of traveling alone. Innovative technology to discover, connect, route match, coordinate and cost-share in a seamless manner. Turbo trip automates end to end process of carpooling & bikepooling and makes pooling safe, comfortable and affordable for the urban commuters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/gowtham.sathyamoorthy__web_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/gowtham.sathyamoorthy__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/gowtham.sathyamoorthy__web_project#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "husky": "^8.0.3"
+  }
+}
