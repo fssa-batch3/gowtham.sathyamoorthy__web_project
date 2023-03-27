@@ -15,7 +15,7 @@ In java script wrok:
 
 // My Progress Table
 
-CRUD For User signning page
+Module For User signning page
 
 => Create user account [completed]
 
@@ -25,12 +25,32 @@ CRUD For User signning page
 
 => Delete user details For deactivate [completed]
 
-CRUD For User Features page
+Module For driver signning page
 
-=> Create products card/list [completed] end_date (28-02-2023)
+=> Create driver account  [completed] end_date (28-02-2023)
 
-=> Read Product Data For card [completed] end_date(28-02-2023)
+=> Read driver data for profile page [completed] end_date(28-02-2023)
 
-=> Update user details For card [completed] end_date(03-03-2023)
+=> Update driver details[completed] end_date(03-03-2023)
 
-=> Deactivate Product details For Card [completed] end_date(03-03-2023)
+=> Delete driver details for deactive [completed] end_date(03-03-2023)
+
+Module For Car Adding
+
+=> Add new car [completed]
+
+=> Read Car details  [completed]
+
+=> Update car details  [completed]
+
+=> Delete car deails  [pending]
+
+
+
+
+
+
+
+
+
+
