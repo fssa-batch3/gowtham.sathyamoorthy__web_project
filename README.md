@@ -53,9 +53,13 @@ Create an account For User:
 
 Scenario 1: Successfully create an account
 Steps:
+
 a. Navigate to the registration page.
+
 b. Enter the required information such as name, email, and password.
+
 c. Click the "Create Account" button.
+
    Expected Result:
 The user is redirected to the login page.
 
@@ -66,9 +70,13 @@ Create an account For Driver:
 
 Scenario 1: Successfully create an account
 Steps:
+
 a. Navigate to the registration page.
+
 b. Enter the required Driver's information such as name, email, and password.
+
 c. Click the "Create Account" button.
+
    Expected Result:
 The user is redirected to the login page.
 
@@ -78,10 +86,15 @@ Add Car details:
 
 Scenario 1: Successfully add car details to card
 Steps:
+
 Log in as a Admin.
-Navigate to the car listing page.
-Select a car details to add to card.
-Click the "Add to list" button.
+
+a. Navigate to the car listing page.
+
+b. Select a car details to add to card.
+
+c. Click the "Add to list" button.
+
 Expected Result:
 The car is added to the customer's card.
 
