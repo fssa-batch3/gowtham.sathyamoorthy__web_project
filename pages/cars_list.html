@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <header>
+    <!-- header part -->
+    <div class="logo">
+      <img src="../assets/images/Turbo trip.png" alt="logo" />
+    </div>
+    <div class="name">Turbo trip</div>
+    <ul class="snip1143">
+      <li class="current"><a href="#" data-hover="Home">Home</a></li>
+      <li>
+        <a href="../pages/About us.html" data-hover="About Us">About Us</a>
+      </li>
+      <li><a href="#" data-hover="Blog">Blog</a></li>
+      <li><a href="#" data-hover="Services">Services</a></li>
+      <li><a href="#" data-hover="Products">Products</a></li>
+      <li>
+        <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
+      </li>
+    </ul>
+    <div class="navbar">
+      <a href="../pages/login.html"><button class="bton">login</button></a>
+    </div>
+    <div class="user_profile">
+      <a href="./profilepage-1.html">
+        <img
+          src="../assets/images/gpro.png"
+          alt="use_pro"
+          class="user_profile1"
+      /></a>
+    </div>
+  </header>
+  <body>
+    <form action="#" id="cars_detail">
+      <input type="url" id="hello" /><br />
+      <input type="text" id="hello1" /><br />
+      <input type="text" id="hello2" /><br />
+      <input type="textarea" id="hello3" /><br />
+      <input type="submit" id="hello4" />
+    </form>
+  </body>
+  <script>
+    let detail = document.getElementById("cars_detail");
+    console.log(detail);
+    detail.addEventListener("submit", function (Add_car) {
+      Add_car.preventDefault();
+      let arr = [];
+      let obj = {};
+      let image = document.getElementById("hello").value;
+      console.log(image);
+      let number = document.getElementById("hello1").value;
+      console.log(number);
+      let model = document.getElementById("hello2").value;
+      console.log(model);
+      let description = document.getElementById("hello3").value;
+      console.log(description);
+      const car_id = Date.now();
+      obj["Image"] = image;
+      obj["Vehicle_no"] = number;
+      obj["Vehicle_model"] = model;
+      obj["Description"] = description;
+      obj.car_id = car_id;
+      console.log(obj);
+
+      if (window.localStorage.getItem("Cars_list") === null) {
+        window.localStorage.setItem("Cars_list", JSON.stringify(arr));
+        arr.push(obj);
+        console.log(arr);
+        alert("Successfully Added");
+      } else {
+        let vehicle = window.localStorage.getItem("Cars_list");
+        let veh_json = JSON.parse(vehicle);
+        veh_json.push(obj);
+        console.log(veh_json);
+        window.localStorage.setItem("Cars_list", JSON.stringify(veh_json));
+        alert("Successfully Car Added");
+        // console.log("working");
+      }
+    });
+  </script>
+</html>

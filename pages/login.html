@@ -157,7 +157,7 @@
 
         <div class="button">
           <button class="btn1">sign-in</button>
-          <button class="btn1" type="button">Forgot password?</button>
+          <!-- <button class="btn1" type="button">Forgot password?</button> -->
         </div>
       </form>
       <div class="sign">
@@ -174,14 +174,14 @@
         const users = JSON.parse(localStorage.getItem("users"));
         const name = document.getElementById("id1").value;
         const email = document.getElementById("id2").value;
-        const number = document.getElementById("id3").value;
+        // const number = document.getElementById("id3").value;
         const password = document.getElementById("id4").value;
         let checkin = false;
         const userData = users.find(function (event) {
-          const email = event["user_email"];
-          const num = event["user_number"];
+          const email_id = event["user_email"];
+          // const num = event["user_number"];
           const pass = event["user_password"];
-          if (num === number) {
+          if (email_id === email) {
             checkin = true;
             if (pass === password) {
               alert("success");
@@ -196,8 +196,9 @@
         }
 
         console.log(userData);
+        // alert("test");
         localStorage.setItem("profile", JSON.stringify(userData["user_email"]));
-        window.location.href = "index.html";
+        window.location.href = "./homepage.html";
       });
     </script>
   </body>

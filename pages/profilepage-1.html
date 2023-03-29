@@ -175,7 +175,7 @@
         localStorage.setItem("users", JSON.stringify(details));
         alert("You have successfully updated your account details!");
       });
-      // const user_email = JSON.parse(window.localStorage.getItem("details"));
+      const user_email = JSON.parse(window.localStorage.getItem("details"));
       let check = true;
       const presend_details = JSON.parse(window.localStorage.getItem("users"));
       let get_presend = details.find(function (user_obj) {

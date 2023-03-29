@@ -58,4 +58,54 @@
       </div>
     </div>
   </body>
+  
 </html>
+let ed_car = document.getElementById("cars_detail");
+let params = window.location.search;
+let parameter = new URLSearchParams(params);
+let paraName = parameter.get("id");
+
+let paraArray = JSON.parse(localStorage.getItem("Cars_list"));
+let paraObj = paraArray.find(function (user) {
+  let Vehicle_model = user["Vehicle_model"];
+  //   console.log(Vehicle_model);
+  if (paraName == Vehicle_model) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+let image = document.getElementById("hello");
+
+let number = document.getElementById("hello1");
+let model = document.getElementById("hello2");
+
+let description = document.getElementById("hello3");
+
+image.value = Cars_list["Image"];
+number.value = Cars_list["Vehicle_no"];
+
+model.value = Cars_list["Vehicle_model"];
+description.value = Cars_list["Description"];
+let index = paraArray.indexOf(Cars_list);
+ed_car.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let image = document.getElementById("hello").value;
+  let number = document.getElementById("hello1").value;
+  let model = document.getElementById("hello2").value;
+  let description = document.getElementById("hello3").value;
+  let car_id = Date.now();
+
+  obj = {
+    Image,
+    Vehicle_no,
+    Vehicle_model,
+    Description,
+    car_id,
+  };
+  let newObj = Object.assign(paraObj, Cars_list);
+  paraArray[index] = newObj;
+  alert("update successfully");
+});

@@ -103,3 +103,13 @@
 .send_1:hover {
   transform: scale(1.1);
 }
+.p_1 {
+  font-size: 2.8rem;
+  margin-left: 15rem;
+  margin-top: 30px;
+}
+.part_1 {
+  font-size: 1.5rem;
+  margin-left: 20rem;
+  margin-bottom: 30px;
+}

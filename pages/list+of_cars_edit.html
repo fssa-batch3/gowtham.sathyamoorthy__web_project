@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" id="cars_detail">
+      <input type="url" id="hello" /><br />
+      <input type="text" id="hello1" /><br />
+      <input type="text" id="hello2" /><br />
+      <input type="textarea" id="hello3" /><br />
+      <input type="submit" value="edit" id="hello4" />
+    </form>
+  </body>
+  <script>
+    let new_carId = JSON.parse(localStorage.getItem("edt_car"));
+    console.log(new_carId);
+    let Cars_list = JSON.parse(localStorage.getItem("Cars_list"));
+    console.log(Cars_list);
+    // let currentDoctor = doctorData.find((id) => doctorData.id === doctorId);
+    let currentcar = Cars_list.find(function (car) {
+      let c_id = Cars_list["id"];
+      if (c_id == new_carId) {
+        return true;
+      }
+    });
+    console.log(currentcar);
+
+    // console.log(currentDoctor);
+    document.getElementById("hello").value = currentcar.Image;
+    document.getElementById("hello1").value = currentcar.Vehicle_no;
+    document.getElementById("hello2").value = currentcar.Vehicle_model;
+    document.getElementById("hello3").value = currentcar.Description;
+    let form = document.getElementById("cars_detail");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let currentcar = Cars_list.find(function (car) {
+        let id = car["id"];
+        if (new_carId === id) {
+          return true;
+        }
+      });
+      let hello = document.getElementById("hello").value;
+      let hello1 = document.getElementById("hello1").value;
+      let hello2 = document.getElementById("hello2").value;
+      let hello3 = document.getElementById("hello3").value;
+      console.log(currentcar);
+      currentcar["hello"] = hello;
+      currentcar["hello1"] = hello1;
+      currentcar["hello2"] = hello2;
+      currentcar["hello3"] = hello3;
+      localStorage.setItem("Cars_list", JSON.stringify(Cars_list));
+      //   window.location.href = "./Doctorslist.html";
+    });
+  </script>
+</html>
