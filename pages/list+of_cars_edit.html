@@ -4,56 +4,127 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/list_editcar.css" />
     <title>Document</title>
   </head>
   <body>
-    <form action="#" id="cars_detail">
-      <input type="url" id="hello" required /><br />
-      <input type="text" id="hello1" required /><br />
-      <input type="text" id="hello2" required /><br />
-      <input type="textarea" id="hello3" required /><br />
-      <input type="submit" value="edit" id="hello4" />
-    </form>
+    <header>
+      <div class="logo">
+        <img src="../assets/images/Turbo trip.png" alt="logo" />
+      </div>
+      <div class="name">Turbo trip</div>
+      <ul class="snip1143">
+        <li class="current">
+          <a href="../pages/homepage.html" data-hover="Home">Home</a>
+        </li>
+        <li>
+          <a href="../pages/About us.html" data-hover="About Us">About Us</a>
+        </li>
+        <li><a href="#" data-hover="Blog">Blog</a></li>
+        <li><a href="#" data-hover="Services">Services</a></li>
+        <li><a href="#" data-hover="Products">Products</a></li>
+        <li>
+          <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
+        </li>
+      </ul>
+      <div class="navbar">
+        <a href="../pages/login.html"><button class="bton">login</button></a>
+      </div>
+      <div class="user_profile">
+        <a href="./profilepage-1.html">
+          <img
+            src="../assets/images/gpro.png"
+            alt="use_pro"
+            class="user_profile1"
+        /></a>
+      </div>
+    </header>
+    <div class="list_1">
+      <form action="#" id="cars_detail">
+        <div class="l_1">
+          <label>Car-Image:</label>
+          <input type="url" id="hello" required /><br />
+        </div>
+        <div class="l_2">
+          <label>Car-Reg-No:</label>
+          <input type="text" id="hello1" required /><br />
+        </div>
+        <div class="l_3">
+          <label>Car-Model:</label>
+          <input type="text" id="hello2" required /><br />
+        </div>
+        <div class="l_4">
+          <label>Car-Details: </label>
+          <input type="textarea" id="hello3" required /><br />
+        </div>
+        <input type="submit" value="Save" id="hello4" />
+        <input type="submit" value="Delete" id="hello5" />
+      </form>
+    </div>
   </body>
   <script>
-    let new_carId = JSON.parse(localStorage.getItem("edt_car"));
-    console.log(new_carId);
+    //    creating URL params function to find the car details
+
+    let carUrl = window.location.search;
+
+    let carParam = new URLSearchParams(carUrl);
+
+    let cardId = carParam.get("detail");
+    console.log(cardId);
+
     let Cars_list = JSON.parse(localStorage.getItem("Cars_list"));
     console.log(Cars_list);
     // let currentDoctor = doctorData.find((id) => doctorData.id === doctorId);
-    let currentcar = Cars_list.find(function (car) {
-      let c_id = Cars_list["id"];
-      if (c_id == new_carId) {
-        return true;
-      }
-    });
-    console.log(currentcar);
+    let cardDetails = Cars_list.find((e) => e["car_id"] == cardId);
+    console.log(cardDetails);
+
+    let findIndex = Cars_list.indexOf(cardDetails);
+    console.log(findIndex);
 
     // console.log(currentDoctor);
-    document.getElementById("hello").value = currentcar.Image;
-    document.getElementById("hello1").value = currentcar.Vehicle_no;
-    document.getElementById("hello2").value = currentcar.Vehicle_model;
-    document.getElementById("hello3").value = currentcar.Description;
+    document.getElementById("hello").value = cardDetails.Image;
+    document.getElementById("hello1").value = cardDetails.Vehicle_no;
+    document.getElementById("hello2").value = cardDetails.Vehicle_model;
+    document.getElementById("hello3").value = cardDetails.Description;
     let form = document.getElementById("cars_detail");
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      let currentcar = Cars_list.find(function (car) {
-        let id = car["id"];
-        if (new_carId === id) {
-          return true;
-        }
-      });
+
       let hello = document.getElementById("hello").value;
       let hello1 = document.getElementById("hello1").value;
       let hello2 = document.getElementById("hello2").value;
       let hello3 = document.getElementById("hello3").value;
-      console.log(currentcar);
-      currentcar["hello"] = hello;
-      currentcar["hello1"] = hello1;
-      currentcar["hello2"] = hello2;
-      currentcar["hello3"] = hello3;
+
+      let editCarObject = {
+        Description: hello3,
+        Image: hello,
+        Vehicle_model: hello2,
+        Vehicle_no: hello1,
+      };
+
+      let carObjectAssaign = Object.assign(cardDetails, editCarObject);
+      console.log(carObjectAssaign);
+
+      Cars_list[findIndex] = carObjectAssaign;
+
       localStorage.setItem("Cars_list", JSON.stringify(Cars_list));
+      alert("Are you want to save new changes");
+      window.location.href = "../pages/list_of_Cars.html";
       //   window.location.href = "./Doctorslist.html";
+    });
+    let delete_car = document.getElementById("hello5");
+    delete_car.addEventListener("click", function (event) {
+      event.preventDefault();
+      let index = Cars_list.indexOf(cardDetails);
+      let msg = confirm("Are you sure you want to delete this Car details");
+      if (msg !== true) {
+        return;
+      } else {
+        Cars_list.splice(index, 1);
+        // console.log(details);
+        localStorage.setItem("Cars_list", JSON.stringify(Cars_list));
+        window.location.href = "../pages/cars_list.html";
+      }
     });
   </script>
 </html>

@@ -45,18 +45,20 @@
     <div class="list_1">
       <form action="#" id="cars_detail">
         <div class="l_1">
-          <label>Car-Image:</label> <input type="url" id="hello" /><br />
+          <label>Car-Image:</label>
+          <input type="url" id="hello" required /><br />
         </div>
         <div class="l_2">
           <label>Car-Reg-No:</label>
-          <input type="text" id="hello1" /><br />
+          <input type="text" id="hello1" required /><br />
         </div>
         <div class="l_3">
-          <label>Car-Model:</label> <input type="text" id="hello2" /><br />
+          <label>Car-Model:</label>
+          <input type="text" id="hello2" required /><br />
         </div>
         <div class="l_4">
           <label>Car-Details: </label>
-          <input type="textarea" id="hello3" /><br />
+          <input type="textarea" id="hello3" required /><br />
         </div>
         <input type="submit" id="hello4" />
       </form>
@@ -97,6 +99,8 @@
         console.log(veh_json);
         window.localStorage.setItem("Cars_list", JSON.stringify(veh_json));
         alert("Successfully Car Added");
+        window.location.href = "../pages/list_of_Cars.html";
+
         // console.log("working");
       }
     });
