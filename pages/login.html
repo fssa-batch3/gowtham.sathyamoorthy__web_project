@@ -143,16 +143,29 @@
       <form id="log_in information">
         <div class="name">
           <label>Full-name</label><br />
-          <input type="Name" id="id1" placeholder="Name" required />
+          <input type="Name" id="id1" placeholder="Name"
+          pattern="[A-Za-z]{1,15}$" required />
         </div>
         <div class="email">
           <label>Email-id</label><br />
-          <input type="text" id="id2" placeholder="Email-id"  required />
+          <input
+            type="text"
+            id="id2"
+            placeholder="Email-id"
+            pattern=".+@gmail\.com"
+            required
+          />
         </div>
 
         <div class="password">
           <label>Password</label><br />
-          <input type="password" id="id4" placeholder="password" required />
+          <input
+            type="password"
+            id="id4"
+            placeholder="password"
+            required
+            pattern="[a-zA-Z0-9]{8,15}$"
+          />
         </div>
 
         <div class="button">

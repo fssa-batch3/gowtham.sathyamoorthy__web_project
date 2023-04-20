@@ -143,6 +143,7 @@
           <input
             type="Name"
             title="Please enter your name "
+            pattern="[A-Za-z]{1,15}$"
             id="id1"
             placeholder="Name"
             required
@@ -150,7 +151,13 @@
         </div>
         <div class="email">
           <label>Email-id</label><br />
-          <input type="email" id="id2" placeholder="Email-id"  required />
+          <input
+            type="email"
+            id="id2"
+            placeholder="Email-id"
+            required
+            pattern=".+@gmail\.com"
+          />
         </div>
 
         <div class="mobile">
@@ -173,6 +180,7 @@
             title="Please ENter Your Password"
             placeholder="password"
             required
+            pattern="[a-zA-Z0-9]{8,15}$"
           />
         </div>
         <div class="otp">
@@ -184,6 +192,7 @@
             title="Please ENter Your Password"
             placeholder="confirm password"
             required
+            pattern="[a-zA-Z0-9]{8,15}$"
           />
         </div>
 

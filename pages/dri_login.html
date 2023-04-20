@@ -147,12 +147,15 @@
         </div>
         <div class="email">
           <label>Email-id</label><br />
-          <input type="text" id="id2" placeholder="Email-id" />
+          <input
+            type="text"
+            id="id2"
+            placeholder="Email-id"
+            pattern=".+@gmail\.com"
+            required
+          />
         </div>
-        <div class="email">
-          <label>Contact-no</label><br />
-          <input type="number" id="id3" placeholder="ph" required />
-        </div>
+
         <div class="password">
           <label>Password</label><br />
           <input type="password" id="id4" placeholder="password" required />
@@ -162,11 +165,12 @@
           <button class="btn1">sign-in</button>
           <button class="btn1" type="button">Forgot password?</button>
         </div>
-      </form>
+   
       <div class="sign">
         <a href="./sign-in.html">Don't have an account ?</a>
       </div>
     </div>
+  </form>
 
     <script>
       const loginform = document.getElementById("log_in information");
