@@ -50,15 +50,30 @@
         </div>
         <div class="l_2">
           <label>Car-Reg-No:</label>
-          <input type="text" id="hello1" required /><br />
+          <input
+            type="text"
+            id="hello1"
+            pattern="^[A-Za-z]{2}[-][0-9]{1,2}[-][A-Za-z]{1,2}[-][0-9]{3,4}$"
+            required
+          /><br />
         </div>
         <div class="l_3">
           <label>Car-Model:</label>
-          <input type="text" id="hello2" required /><br />
+          <input
+            type="text"
+            id="hello2"
+            pattern="[A-Za-z0-9 ]{1,18}"
+            required
+          /><br />
         </div>
         <div class="l_4">
           <label>Car-Details: </label>
-          <input type="textarea" id="hello3" required /><br />
+          <input
+            type="textarea"
+            id="hello3"
+            pattern="[A-Za-z ]{1,20}"
+            required
+          /><br />
         </div>
         <input type="submit" id="hello4" />
       </form>

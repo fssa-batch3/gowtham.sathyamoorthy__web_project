@@ -47,15 +47,30 @@
         </div>
         <div class="l_2">
           <label>Car-Reg-No:</label>
-          <input type="text" id="hello1" required /><br />
+          <input
+            type="text"
+            id="hello1"
+            required
+            pattern="^[A-Za-z]{2}[-][0-9]{1,2}[-][A-Za-z]{1,2}[-][0-9]{3,4}$"
+          /><br />
         </div>
         <div class="l_3">
           <label>Car-Model:</label>
-          <input type="text" id="hello2" required /><br />
+          <input
+            type="text"
+            id="hello2"
+            required
+            pattern="[A-Za-z0-9 ]{1,18}"
+          /><br />
         </div>
         <div class="l_4">
           <label>Car-Details: </label>
-          <input type="textarea" id="hello3" required /><br />
+          <input
+            type="textarea"
+            id="hello3"
+            required
+            pattern="[A-Za-z ]{1,20}"
+          /><br />
         </div>
         <input type="submit" value="Save" id="hello4" />
         <input type="submit" value="Delete" id="hello5" />
@@ -123,7 +138,7 @@
         Cars_list.splice(index, 1);
         // console.log(details);
         localStorage.setItem("Cars_list", JSON.stringify(Cars_list));
-        window.location.href = "../pages/cars_list.html";
+        window.location.href = "../pages/list_of_Cars.html";
       }
     });
   </script>
