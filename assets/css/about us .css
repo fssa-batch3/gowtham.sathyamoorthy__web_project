@@ -72,7 +72,8 @@ header {
   color: white;
   white-space: nowrap;
 }
-.snip1143 li:hover a {
+.snip1143 li:hover a,
+.snip1143 .a-hover a {
   transform: translateY(-100%);
 }
 

@@ -86,27 +86,22 @@
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
       #id2 {
         color: goldenrod;
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
-      #id3 {
-        color: goldenrod;
-        border-bottom: 3px solid goldenrod;
-        border-right: 3px solid goldenrod;
-        color: goldenrod;
-        border-bottom: 3px solid goldenrod;
-        border-right: 3px solid goldenrod;
-        outline-style: none;
-      }
+
       #id4 {
         color: goldenrod;
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
       .photo {
         width: 100px;
@@ -120,12 +115,27 @@
         font-weight: bolder;
         margin-top: -2%;
       }
+      .p-1 {
+        color: goldenrod;
+        margin-left: 70px;
+        font-weight: bolder;
+        margin-top: -2%;
+        font-size: 20px;
+      }
       .sign a {
-        margin-left: 50px;
+        margin-left: 70px;
         color: goldenrod;
       }
       ::placeholder {
         color: goldenrod;
+      }
+      .log {
+        margin-left: 7rem;
+        font-size: 1rem;
+        font-weight: bolder;
+        width: 10rem;
+        height: 2rem;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -139,12 +149,18 @@
           class="photo"
         />
         <h1>Login Here</h1>
+        <p class="p-1">Welcome back ! Our Customer</p>
       </div>
       <form id="log_in information">
         <div class="name">
           <label>Full-name</label><br />
-          <input type="Name" id="id1" placeholder="Name"
-          pattern="[A-Za-z]{1,15}$" required />
+          <input
+            type="Name"
+            id="id1"
+            placeholder="Name"
+            pattern="[A-Za-z]{1,15}$"
+            required
+          />
         </div>
         <div class="email">
           <label>Email-id</label><br />
@@ -170,12 +186,15 @@
 
         <div class="button">
           <button class="btn1">sign-in</button>
-          <!-- <button class="btn1" type="button">Forgot password?</button> -->
+          <a href="./forgot_pass.html">
+            <button class="btn1" type="button">Forgot password?</button></a
+          >
         </div>
       </form>
       <div class="sign">
-        <a href="./sign-in.html">Don't have an account ?</a>
+        <a href="./sign-in.html">Don't have an account ? sign in here </a>
       </div>
+      <a href="./sign-in.html"> <button class="log">back</button></a>
     </div>
 
     <script>

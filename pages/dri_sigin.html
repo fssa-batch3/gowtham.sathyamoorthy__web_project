@@ -35,7 +35,7 @@
         color: aquamarine;
         border-bottom: 3px solid aquamarine;
         border-right: 3px solid aquamarine;
-
+        width: 250px;
         outline-style: none;
       }
       #id2 {
@@ -43,24 +43,28 @@
         border-bottom: 3px solid aquamarine;
         border-right: 3px solid aquamarine;
         outline-style: none;
+        width: 250px;
       }
       #id3 {
         color: aquamarine;
         border-bottom: 3px solid aquamarine;
         border-right: 3px solid aquamarine;
         outline-style: none;
+        width: 250px;
       }
       #id4 {
         color: aquamarine;
         border-bottom: 3px solid aquamarine;
         border-right: 3px solid aquamarine;
         outline-style: none;
+        width: 250px;
       }
       #id5 {
         color: aquamarine;
         border-bottom: 3px solid aquamarine;
         border-right: 3px solid aquamarine;
         outline-style: none;
+        width: 250px;
       }
       .name {
         color: aquamarine;
@@ -82,13 +86,7 @@
         margin-left: 50px;
         margin-bottom: 05px;
       }
-      .photo {
-        width: 75px;
-        height: 75px;
-        margin-left: 170px;
-        margin-top: -5px;
-        border-radius: 50%;
-      }
+
       .email {
         color: aquamarine;
         font-size: 20px;
@@ -128,13 +126,29 @@
         color: black;
         transition: 0.5s;
       }
+      .sign a {
+        margin-left: 70px;
+        color: aquamarine;
+        font-weight: bold;
+      }
+      .sign {
+        margin-top: 1.3rem;
+      }
+      .log {
+        margin-left: 7rem;
+        font-size: 1rem;
+        font-weight: bolder;
+        width: 10rem;
+        height: 2rem;
+        cursor: pointer;
+        margin-top: -10px;
+      }
     </style>
   </head>
   <body>
     <!-- this page refer to the sign-in -->
     <div class="box">
       <div class="logo">
-        <img src="../assets/images/user.png" alt="image" class="photo" />
         <h1>Sign-up Here</h1>
       </div>
       <form id="sign_in information">
@@ -199,7 +213,11 @@
           </a> -->
           <button>Sign-up</button>
         </div>
+        <div class="sign">
+          <a href="./dri_login.html">Already have an account ? Log in here </a>
+        </div>
       </form>
+      <a href="../index.html"> <button class="log">back</button></a>
     </div>
 
     <script>

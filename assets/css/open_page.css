@@ -3,7 +3,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: lightgray;
+  background-image: url(../images/tu_baclground.jpg);
+  background-size: cover;
 }
 .flip-card {
   background-color: transparent;
@@ -19,12 +20,25 @@
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: aliceblue;
+  color: white;
   margin-bottom: 30px;
   margin-left: 30px;
   margin-top: -10px;
   letter-spacing: 2px;
-  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+.title-7 {
+  font-size: 1.8em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  color: white;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-top: -10px;
+  letter-spacing: 2px;
+  background: none;
   cursor: pointer;
 }
 .title-1 {
@@ -32,9 +46,9 @@
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: rgb(201, 203, 205);
+  color: white;
   margin-left: 30px;
-  background-color: transparent;
+  background: none;
   cursor: pointer;
 }
 .title-2 {
@@ -42,31 +56,81 @@
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: rgb(201, 203, 205);
+  color: black;
   margin-left: 30px;
-  background-color: transparent;
+  background: none;
   transition: 0.5s;
   cursor: pointer;
 }
 .title-2:hover {
   transform: scale(1.2);
-  color: whitesmoke;
+  color: black;
+  background: none;
 }
 .title-3 {
   font-size: 1.7em;
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: aliceblue;
+  color: black;
   margin-left: 30px;
-  background-color: transparent;
+  background: none;
   cursor: pointer;
   margin-bottom: 30px;
   letter-spacing: 1px;
 }
+.title-8 {
+  font-size: 1.7em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  color: black;
+  margin-left: 30px;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+.title-9 {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  color: black;
+  margin-left: 30px;
+  background: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.title-9:hover {
+  transform: scale(1.2);
+  color: black;
+  background: none;
+}
 .title-4 {
   text-decoration: none;
-  background-color: transparent;
+
+  background: none;
+}
+.title-5 {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  color: white;
+  margin-left: 30px;
+  background: none;
+  cursor: pointer;
+}
+.title-6 {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  color: white;
+  margin-left: 30px;
+  background: none;
+  cursor: pointer;
 }
 .flip-card-inner {
   position: relative;
@@ -99,23 +163,23 @@
 .flip-card-front {
   background: radial-gradient(
     circle at -8.9% 51.2%,
-    rgb(199, 61, 2) 0%,
-    rgb(255, 68, 0) 15.9%,
-    rgb(247, 122, 5) 15.9%,
-    rgb(255, 163, 77) 24.4%,
-    rgb(19, 30, 37) 24.5%,
-    rgb(19, 30, 37) 66%
+    rgb(251, 250, 250) 0%,
+    rgb(200, 199, 199) 15.9%,
+    rgb(167, 166, 166) 15.9%,
+    rgb(120, 120, 120) 24.4%,
+    rgb(58, 58, 58) 24.5%,
+    rgb(26, 27, 27) 66%
   );
 }
 .flip-card-back {
   background: radial-gradient(
     circle at -8.9% 51.2%,
-    rgb(199, 61, 2) 0%,
-    rgb(255, 68, 0) 15.9%,
-    rgb(247, 122, 5) 15.9%,
-    rgb(255, 163, 77) 24.4%,
-    rgb(19, 30, 37) 24.5%,
-    rgb(19, 30, 37) 66%
+    rgb(2, 2, 2) 0%,
+    rgb(62, 62, 62) 15.9%,
+    rgb(93, 92, 92) 15.9%,
+    rgb(180, 179, 179) 24.4%,
+    rgb(233, 233, 234) 24.5%,
+    rgb(234, 236, 236) 66%
   );
   transform: rotateY(180deg);
 }
@@ -125,7 +189,7 @@
   margin-top: 270px;
 }
 .flip-card-2 {
-  background-color: transparent;
+  background: none;
   width: 250px;
   height: 300px;
   perspective: 1000px;
@@ -163,24 +227,24 @@
 .flip-card-front-2 {
   background: radial-gradient(
     circle at -8.9% 51.2%,
-    rgb(199, 61, 2) 0%,
-    rgb(255, 68, 0) 15.9%,
-    rgb(247, 122, 5) 15.9%,
-    rgb(255, 163, 77) 24.4%,
-    rgb(19, 30, 37) 24.5%,
-    rgb(19, 30, 37) 66%
+    rgb(251, 250, 250) 0%,
+    rgb(200, 199, 199) 15.9%,
+    rgb(167, 166, 166) 15.9%,
+    rgb(120, 120, 120) 24.4%,
+    rgb(58, 58, 58) 24.5%,
+    rgb(26, 27, 27) 66%
   );
 }
 
 .flip-card-back-2 {
   background: radial-gradient(
     circle at -8.9% 51.2%,
-    rgb(199, 61, 2) 0%,
-    rgb(255, 68, 0) 15.9%,
-    rgb(247, 122, 5) 15.9%,
-    rgb(255, 163, 77) 24.4%,
-    rgb(19, 30, 37) 24.5%,
-    rgb(19, 30, 37) 66%
+    rgb(2, 2, 2) 0%,
+    rgb(62, 62, 62) 15.9%,
+    rgb(93, 92, 92) 15.9%,
+    rgb(180, 179, 179) 24.4%,
+    rgb(233, 233, 234) 24.5%,
+    rgb(234, 236, 236) 66%
   );
   transform: rotateY(180deg);
 }
