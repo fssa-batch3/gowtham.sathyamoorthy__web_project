@@ -158,7 +158,7 @@
     <!-- this page refer to the sign-in -->
     <div class="box">
       <div class="logo">
-        <h1>Sign-In Here</h1>
+        <h1>Sign-Up Here</h1>
       </div>
       <form id="sign_in information">
         <div class="name">
@@ -186,8 +186,8 @@
         <div class="mobile">
           <label>Phone-Number</label><br />
           <input
-            type="number"
-            pattern="[0-9]{0,10}"
+            type="tel"
+            pattern="[6-9]{1}[0-9]{9}"
             maxlength="10"
             id="id3"
             placeholder="mobile"
@@ -223,7 +223,7 @@
           <!-- <a href="../index.html">
             <button>Sign-up</button>
           </a> -->
-          <button>Sign-up</button>
+          <button>Sign-in</button>
         </div>
         <div class="sign">
           <a href="./login.html">Already have an account ? Log in here </a>
@@ -258,6 +258,7 @@
           user_password,
           user_confrimpassword,
           user_id,
+          check: "user",
         };
         console.log(user_data);
 
@@ -266,7 +267,7 @@
           alert("Confrim password is in correct!");
           return false;
         }
-        
+
         const select_user = users.find(function (users) {
           const cus_phone = users["user_number"];
           const cus_email = users["user_email"];
@@ -281,10 +282,11 @@
         if (!validation_error && user_number.length < 11) {
           users.push(user_data);
           localStorage.setItem("users", JSON.stringify(users));
+          localStorage.setItem("user_id", user_id);
           localStorage.setItem("userEmail", JSON.stringify(user_email));
           console.log(users);
           alert("Account Created Successfully");
-          window.location.href = "../pages/login.html";
+          window.location.href = "../pages/login.html?user=" + user_id;
         } else {
           alert("mobile number should contain less than 10 numbers");
         }

@@ -8,48 +8,46 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <nav id="js_header">
+      <!-- header part -->
       <div class="logo">
         <img src="../assets/images/Turbo trip.png" alt="logo" />
       </div>
-      <div class="name">Turbo trip</div>
       <ul class="snip1143">
-        <li class="current">
-          <a href="../pages/homepage.html" data-hover="Home">Home</a>
-        </li>
+        <li class="current"><a href="#" data-hover="Home">Home</a></li>
         <li>
           <a href="../pages/About us.html" data-hover="About Us">About Us</a>
         </li>
-        <li><a href="#" data-hover="Blog">Blog</a></li>
-        <li><a href="#" data-hover="Services">Services</a></li>
-        <li><a href="#" data-hover="Products">Products</a></li>
+        <li>
+          <a href="../pages/collapse.html" data-hover="Notification"
+            >Notification</a
+          >
+        </li>
         <li>
           <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
         </li>
       </ul>
-      <div class="navbar">
-        <a href="../pages/login.html"><button class="bton">login</button></a>
-      </div>
+
       <div class="user_profile">
-        <a href="./profilepage-1.html">
+        <a href="../pages/dri_profile.html">
           <img
             src="../assets/images/gpro.png"
             alt="use_pro"
             class="user_profile1"
         /></a>
       </div>
-    </header>
+    </nav>
     <div class="list_1">
       <form action="#" id="cars_detail">
         <div class="l_1">
           <label>Car-Image:</label>
-          <input type="url" id="hello" required /><br />
+          <input type="url" id="ca_r" required /><br />
         </div>
         <div class="l_2">
           <label>Car-Reg-No:</label>
           <input
             type="text"
-            id="hello1"
+            id="ca_r1"
             required
             pattern="^[A-Za-z]{2}[-][0-9]{1,2}[-][A-Za-z]{1,2}[-][0-9]{3,4}$"
           /><br />
@@ -58,7 +56,7 @@
           <label>Car-Model:</label>
           <input
             type="text"
-            id="hello2"
+            id="ca_r2"
             required
             pattern="[A-Za-z0-9 ]{1,18}"
           /><br />
@@ -67,7 +65,7 @@
           <label>Car-Details: </label>
           <input
             type="textarea"
-            id="hello3"
+            id="ca_r3"
             required
             pattern="[A-Za-z ]{1,20}"
           /><br />
@@ -97,24 +95,24 @@
     console.log(findIndex);
 
     // console.log(currentDoctor);
-    document.getElementById("hello").value = cardDetails.Image;
-    document.getElementById("hello1").value = cardDetails.Vehicle_no;
-    document.getElementById("hello2").value = cardDetails.Vehicle_model;
-    document.getElementById("hello3").value = cardDetails.Description;
+    document.getElementById("ca_r").value = cardDetails.Image;
+    document.getElementById("ca_r1").value = cardDetails.Vehicle_no;
+    document.getElementById("ca_r2").value = cardDetails.Vehicle_model;
+    document.getElementById("ca_r3").value = cardDetails.Description;
     let form = document.getElementById("cars_detail");
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      let hello = document.getElementById("hello").value;
-      let hello1 = document.getElementById("hello1").value;
-      let hello2 = document.getElementById("hello2").value;
-      let hello3 = document.getElementById("hello3").value;
+      let hello = document.getElementById("ca_r").value;
+      let hello1 = document.getElementById("ca_r1").value;
+      let hello2 = document.getElementById("ca_r2").value;
+      let hello3 = document.getElementById("ca_r3").value;
 
       let editCarObject = {
-        Description: hello3,
-        Image: hello,
-        Vehicle_model: hello2,
-        Vehicle_no: hello1,
+        Description: ca_r3,
+        Image: ca_r,
+        Vehicle_model: ca_r2,
+        Vehicle_no: ca_r1,
       };
 
       let carObjectAssaign = Object.assign(cardDetails, editCarObject);

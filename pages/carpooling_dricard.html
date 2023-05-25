@@ -11,7 +11,7 @@
     />
     <title>Document</title>
   </head>
-  <body>
+  <!-- <body>
     <div class="card_1">
       <div class="card">
         <div>
@@ -41,100 +41,159 @@
         <div><button class="ca_3">Contact Driver</button></div>
       </div>
     </div>
-  </body>
+  </body> -->
+
   <script>
-    let driver = JSON.parse(localStorage.getItem("Drivers"));
-    console.log(driver);
+    let areas = [
+      "adayar",
+      "perungudi",
+      "kandhachavdi",
+      "taramani",
+      "velachery",
+      "perungalathur",
+      "gudhuvancherry",
+      "ambathur",
+      "marinabeach",
+      "ramapuram",
+      "chengalpattu",
+      "maangadu",
+      "manali",
+      "tambaram",
+      "vadapalani",
+      "porur",
+      "karapakkam",
+      "navalur",
+      "thiruporur",
+    ];
 
-    for (let i = 0; i < driver.length; i++) {
-      // Create the main div element with class name "card_1"
-      const cardDiv = document.createElement("div");
-      cardDiv.classList.add("card_1");
+    let driver = JSON.parse(localStorage.getItem("new_Driver"));
+    // console.log(driver);
+    let pick_check = JSON.parse(localStorage.getItem("pickup"));
+    // console.log(pick_check);
 
-      // Create the first div element with class name "card"
-      const driverInfoDiv = document.createElement("div");
-      driverInfoDiv.classList.add("card");
+    // SELECT CAR DRIVER LIST
+    function carDriverList(ar) {
+      for (let i = 0; i < ar.length; i++) {
+        // Create the main div element with class name "card_1"
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("card_1");
 
-      // Create the div element with image and class name "viji"
-      const driverImageDiv = document.createElement("div");
-      const driverImage = document.createElement("img");
-      driverImage.src = driver[i][""];
-      driverImage.classList.add("viji");
-      driverImage.alt = "Driver Profile Picture";
+        // Create the first div element with class name "card"
+        const driverInfoDiv = document.createElement("div");
+        driverInfoDiv.classList.add("card");
 
-      // Append the image element to the div element
-      driverImageDiv.append(driverImage);
+        // Create the div element with image and class name "viji"
+        const driverImageDiv = document.createElement("div");
+        const driverImage = document.createElement("img");
+        driverImage.src = ar[i]["new_driver_Img"];
+        driverImage.classList.add("viji");
+        driverImage.alt = "Driver Profile Picture";
 
-      // Create the div element with class name "ca_1"
-      const driverDetailsDiv1 = document.createElement("div");
-      driverDetailsDiv1.classList.add("ca_1");
+        // Append the image element to the div element
+        driverImageDiv.append(driverImage);
 
-      // Create the heading element with text
-      const driverName = document.createElement("h2");
-      driverName.textContent = driver[i]["Driver_name"];
+        // Create the div element with class name "ca_1"
+        const driverDetailsDiv1 = document.createElement("div");
+        driverDetailsDiv1.classList.add("ca_1");
 
-      // Create the paragraph element with bold text
-      const driverAge = document.createElement("p");
-      driverAge.innerHTML = "<b>Age</b>: 35";
+        // Create the heading element with text
+        const driverName = document.createElement("h2");
+        driverName.textContent = ar[i]["new_driver_name"];
 
-      // Append the heading and paragraph elements to the first div element
-      driverDetailsDiv1.append(driverName);
-      driverDetailsDiv1.append(driverAge);
+        // Create the paragraph element with bold text
+        const driverAge = document.createElement("p");
+        driverAge.innerHTML = "<b>Age</b>:" + ar[i]["new_driver_age"];
 
-      // Create the second div element with class name "ca_1"
-      const driverDetailsDiv2 = document.createElement("div");
-      driverDetailsDiv2.classList.add("ca_1");
+        // Append the heading and paragraph elements to the first div element
+        driverDetailsDiv1.append(driverName);
+        driverDetailsDiv1.append(driverAge);
 
-      // Create the paragraph elements with bold text
-      const carModel = document.createElement("p");
-      carModel.innerHTML = "<b>Car Model</b>: Toyota Corolla";
+        // Create the second div element with class name "ca_1"
+        const driverDetailsDiv2 = document.createElement("div");
+        driverDetailsDiv2.classList.add("ca_1");
 
-      const licensePlate = document.createElement("p");
-      licensePlate.innerHTML = "<b>License Plate</b>: XYZ 123";
+        // Create the paragraph elements with bold text
+        const carModel = document.createElement("p");
+        carModel.innerHTML = "<b>Car Model</b>:" + ar[i]["new_driver_car"];
 
-      // Append the paragraph elements to the second div element
-      driverDetailsDiv2.append(carModel);
-      driverDetailsDiv2.append(licensePlate);
+        const licensePlate = document.createElement("p");
+        licensePlate.innerHTML =
+          "<b>License Plate</b>:" + ar[i]["new_driver_numplate"];
 
-      // Append the div element with image, first div element, and second div element to the main div element
-      driverInfoDiv.append(driverImageDiv);
-      driverInfoDiv.append(driverDetailsDiv1);
-      driverInfoDiv.append(driverDetailsDiv2);
+        // Append the paragraph elements to the second div element
+        driverDetailsDiv2.append(carModel);
+        driverDetailsDiv2.append(licensePlate);
 
-      // Create the second div element with class name "sec_2"
-      const rideInfoDiv = document.createElement("div");
-      rideInfoDiv.classList.add("sec_2");
+        // Append the div element with image, first div element, and second div element to the main div element
+        driverInfoDiv.append(driverImageDiv);
+        driverInfoDiv.append(driverDetailsDiv1);
+        driverInfoDiv.append(driverDetailsDiv2);
 
-      // Create the div element with class name "ca_2"
-      const rideDetailsDiv = document.createElement("div");
-      rideDetailsDiv.classList.add("ca_2");
+        // Create the second div element with class name "sec_2"
+        const rideInfoDiv = document.createElement("div");
+        rideInfoDiv.classList.add("sec_2");
 
-      // Create the paragraph elements with bold text
-      const departureTime = document.createElement("p");
-      departureTime.innerHTML = "<b>Departure Time</b>: 8:00 AM";
+        // Create the div element with class name "ca_2"
+        const rideDetailsDiv = document.createElement("div");
+        rideDetailsDiv.classList.add("ca_2");
 
-      const route = document.createElement("p");
-      route.innerHTML = "<b>Route</b>: San Francisco to Palo Alto";
+        // Create the paragraph elements with bold text
+        const departureTime = document.createElement("p");
+        departureTime.innerHTML =
+          "<b>Departure Time</b>: " + ar[i]["new_driver_Departure"];
 
-      // Append the paragraph elements to the div element
-      rideDetailsDiv.append(departureTime);
-      rideDetailsDiv.append(route);
+        const route = document.createElement("p");
+        route.innerHTML = "<b>Route</b>:" + ar[i]["new_driver_location"];
 
-      // Create the button element with class name "ca_3" and text
-      const contactDriverBtn = document.createElement("button");
-      contactDriverBtn.classList.add("ca_3");
-      contactDriverBtn.textContent = "Contact Driver";
+        // Append the paragraph elements to the div element
+        rideDetailsDiv.append(departureTime);
+        rideDetailsDiv.append(route);
 
-      // Append the div element with paragraph elements and button element to the second div element
-      rideInfoDiv.append(rideDetailsDiv);
-      rideInfoDiv.append(contactDriverBtn);
+        // // Create the <a> element
+        const link = document.createElement("a");
+        link.href = "../pages/otp.html";
+        rideInfoDiv.append(link);
 
-      // Append the first div element and second div element to the main div element
-      cardDiv.append(driverInfoDiv);
-      cardDiv.append(rideInfoDiv);
+        // Create the button element with class name "ca_3" and text
+        const contactDriverBtn = document.createElement("button");
+        contactDriverBtn.classList.add("ca_3");
+        contactDriverBtn.textContent = "Contact Driver";
 
-      // Append the main div element to the document body or any other parent element
-      document.body.append(cardDiv);
+        // Append the div element with paragraph elements and button element to the second div element
+        rideInfoDiv.append(rideDetailsDiv);
+        link.append(contactDriverBtn);
+
+        // Append the first div element and second div element to the main div element
+        cardDiv.append(driverInfoDiv);
+        cardDiv.append(rideInfoDiv);
+
+        // Append the main div element to the document body or any other parent element
+        document.body.append(cardDiv);
+      }
+    }
+    // calling back the function
+
+    const driver_pick_card = [];
+    function findLocation(place) {
+      const findPlace = driver.filter((h) => h.new_driver_location == place);
+      // console.log(findPlace);
+      return findPlace;
+    }
+    for (let i = 0; i < areas.length; i++) {
+      const element = areas[i].toLowerCase();
+      if (element == pick_check) {
+        let locations = findLocation(element);
+        for (let j = 0; j < locations.length; j++) {
+          driver_pick_card.push(locations[j]);
+          console.log(driver_pick_card);
+        }
+      }
+    }
+    if (driver_pick_card[0] === undefined) {
+      alert("There is no driver in your area");
+      window.location.href = "../pages/carpool.html";
+    } else {
+      carDriverList(driver_pick_card);
     }
   </script>
 </html>

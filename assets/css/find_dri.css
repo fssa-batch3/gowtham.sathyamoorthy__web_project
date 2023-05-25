@@ -4,9 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: whitesmoke;
-}
+
 nav {
   justify-content: space-between;
   align-items: center;
@@ -73,8 +71,7 @@ nav {
   color: white;
   white-space: nowrap;
 }
-.snip1143 li:hover a,
-.snip1143 .current a {
+.snip1143 li:hover a {
   transform: translateY(-100%);
 }
 .navbar {
@@ -92,36 +89,67 @@ nav {
   border-radius: 50px;
   margin-left: 10px;
 }
-.car_s {
+.bton {
+  width: 150px;
+  height: 40px;
+  /* margin-right: 100px; */
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 19px;
+  transition: 0.8s;
+  cursor: pointer;
+}
+.name {
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(223, 215, 215);
+}
+.location {
+  background-color: none;
+}
+
+.loc_2 {
   display: flex;
-  justify-content: space-evenly;
-  height: 7rem;
-  width: 70rem;
-  /* border: 1px solid black; */
-  box-shadow: 0px 1px 20px rgb(40, 44, 44);
-  margin-top: 7rem;
-  margin-left: 12rem;
+}
+.loc_1 {
+  color: black;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.location {
+  margin-left: 0px;
+  height: 20rem;
+  width: 20rem;
+  margin-top: -20px;
+}
+.find {
+  height: 500px;
+  width: 500px;
+  margin-top: 10rem;
+  border: 2px solid black;
+  margin-left: 500px;
+}
+.loc_3 {
+  margin-top: 130px;
+  color: black;
+  font-size: 30px;
+}
+.can_1 {
+  height: 50px;
+  margin-left: 50px;
+  width: 150px;
+  background-color: red;
+  color: white;
+  margin-top: -100rem;
+  font-size: 20px;
   cursor: pointer;
   transition: 0.5s;
-  background-color: white;
-  border-right: 05px solid black;
-  border-bottom: 05px solid black;
+  border-radius: 10px;
 }
-.car_s:hover {
-  transform: scale(1.05);
+.can_1:hover {
+  transform: scale(1.1);
   transition: 0.5s;
-}
-.car_img {
-  width: 7rem;
-  height: 7rem;
-}
-.div_c1 {
-  margin-top: 1.2rem;
-}
-.c_2 {
-  margin-top: 0.5rem;
-  font-weight: 600;
-}
-.div_c {
-  margin-top: 2.3rem;
 }

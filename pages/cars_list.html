@@ -11,48 +11,51 @@
     />
     <title>Document</title>
   </head>
-  <header>
-    <!-- header part -->
-    <div class="logo">
-      <img src="../assets/images/Turbo trip.png" alt="logo" />
-    </div>
-    <div class="name">Turbo trip</div>
-    <ul class="snip1143">
-      <li class="current"><a href="#" data-hover="Home">Home</a></li>
-      <li>
-        <a href="../pages/About us.html" data-hover="About Us">About Us</a>
-      </li>
-      <li><a href="#" data-hover="Blog">Blog</a></li>
-      <li><a href="#" data-hover="Services">Services</a></li>
-      <li><a href="#" data-hover="Products">Products</a></li>
-      <li>
-        <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
-      </li>
-    </ul>
-    <div class="navbar">
-      <a href="../pages/login.html"><button class="bton">login</button></a>
-    </div>
-    <div class="user_profile">
-      <a href="../pages/dri_profile.html">
-        <img
-          src="../assets/images/gpro.png"
-          alt="use_pro"
-          class="user_profile1"
-      /></a>
-    </div>
-  </header>
+  <nav id="js_header">
+    <header>
+      <!-- header part -->
+      <div class="logo">
+        <img src="../assets/images/Turbo trip.png" alt="logo" />
+      </div>
+      <ul class="snip1143">
+        <li class="current">
+          <a href="../pages/drive_with_us.html" data-hover="Home">Home</a>
+        </li>
+        <li>
+          <a href="../pages/About us.html" data-hover="About Us">About Us</a>
+        </li>
+        <li>
+          <a href="../pages/collapse.html" data-hover="Notification"
+            >Notification</a
+          >
+        </li>
+        <li>
+          <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
+        </li>
+      </ul>
+
+      <div class="user_profile">
+        <a href="../pages/dri_profile.html">
+          <img
+            src="../assets/images/gpro.png"
+            alt="use_pro"
+            class="user_profile1"
+        /></a>
+      </div>
+    </header>
+  </nav>
   <body>
     <div class="list_1">
       <form action="#" id="cars_detail">
         <div class="l_1">
           <label>Car-Image:</label>
-          <input type="url" id="hello" required /><br />
+          <input type="url" id="ca_r" required /><br />
         </div>
         <div class="l_2">
           <label>Car-Reg-No:</label>
           <input
             type="text"
-            id="hello1"
+            id="ca_r1"
             pattern="^[A-Za-z]{2}[-][0-9]{1,2}[-][A-Za-z]{1,2}[-][0-9]{3,4}$"
             required
           /><br />
@@ -61,7 +64,7 @@
           <label>Car-Model:</label>
           <input
             type="text"
-            id="hello2"
+            id="ca_r2"
             pattern="[A-Za-z0-9 ]{1,18}"
             required
           /><br />
@@ -70,12 +73,12 @@
           <label>Car-Details: </label>
           <input
             type="textarea"
-            id="hello3"
+            id="ca_r3"
             pattern="[A-Za-z ]{1,20}"
             required
           /><br />
         </div>
-        <input type="submit" id="hello4" />
+        <input type="submit" id="ca_r4" />
       </form>
     </div>
   </body>
@@ -86,13 +89,13 @@
       Add_car.preventDefault();
       let arr = [];
       let obj = {};
-      let image = document.getElementById("hello").value;
+      let image = document.getElementById("ca_r").value;
       console.log(image);
-      let number = document.getElementById("hello1").value;
+      let number = document.getElementById("ca_r1").value;
       console.log(number);
-      let model = document.getElementById("hello2").value;
+      let model = document.getElementById("ca_r2").value;
       console.log(model);
-      let description = document.getElementById("hello3").value;
+      let description = document.getElementById("ca_r3").value;
       console.log(description);
       const car_id = Date.now();
       obj["Image"] = image;
@@ -120,4 +123,5 @@
       }
     });
   </script>
+  <script src="../assets/js/nav.js"></script>
 </html>

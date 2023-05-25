@@ -4,9 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: whitesmoke;
-}
+
 nav {
   justify-content: space-between;
   align-items: center;
@@ -73,8 +71,7 @@ nav {
   color: white;
   white-space: nowrap;
 }
-.snip1143 li:hover a,
-.snip1143 .current a {
+.snip1143 li:hover a {
   transform: translateY(-100%);
 }
 .navbar {
@@ -92,36 +89,83 @@ nav {
   border-radius: 50px;
   margin-left: 10px;
 }
-.car_s {
+.dri_card_1 {
   display: flex;
-  justify-content: space-evenly;
-  height: 7rem;
-  width: 70rem;
-  /* border: 1px solid black; */
-  box-shadow: 0px 1px 20px rgb(40, 44, 44);
-  margin-top: 7rem;
-  margin-left: 12rem;
+  border: 10px solid black;
+  width: 400px;
+  height: 180px;
+  background-color: rgb(29, 29, 29);
+  color: #cfcccc;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+h3 {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+h4 {
+  font-size: 20px;
+  margin-left: 20px;
+}
+.but1 {
+  background-color: green;
+  color: white;
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 10px;
+  transition: 0.3s;
   cursor: pointer;
-  transition: 0.5s;
-  background-color: white;
-  border-right: 05px solid black;
-  border-bottom: 05px solid black;
+  border: none;
+  border-radius: 10px;
 }
-.car_s:hover {
-  transform: scale(1.05);
-  transition: 0.5s;
+.but2 {
+  background-color: red;
+  color: white;
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 80px;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
 }
-.car_img {
-  width: 7rem;
-  height: 7rem;
+.but1:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
-.div_c1 {
-  margin-top: 1.2rem;
+
+.but2:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
-.c_2 {
-  margin-top: 0.5rem;
-  font-weight: 600;
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 100px;
+  margin-top: 100px;
 }
-.div_c {
-  margin-top: 2.3rem;
+.name {
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(223, 215, 215);
+  margin-left: 250px;
 }

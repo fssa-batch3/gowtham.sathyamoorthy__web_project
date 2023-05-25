@@ -152,7 +152,7 @@
         <p class="p-1">Welcome back ! Our Customer</p>
       </div>
       <form id="log_in information">
-        <div class="name">
+        <!-- <div class="name">
           <label>Full-name</label><br />
           <input
             type="Name"
@@ -161,7 +161,7 @@
             pattern="[A-Za-z]{1,15}$"
             required
           />
-        </div>
+        </div> -->
         <div class="email">
           <label>Email-id</label><br />
           <input
@@ -185,16 +185,16 @@
         </div>
 
         <div class="button">
-          <button class="btn1">sign-in</button>
+          <button class="btn1" type="submit">sign-in</button>
           <a href="./forgot_pass.html">
-            <button class="btn1" type="button">Forgot password?</button></a
+            <button class="btn1">Forgot password?</button></a
           >
         </div>
       </form>
       <div class="sign">
-        <a href="./sign-in.html">Don't have an account ? sign in here </a>
+        <a href="./sign-in.html">Don't have an account ? Signup here </a>
       </div>
-      <a href="./sign-in.html"> <button class="log">back</button></a>
+      <a href="./index.html"> <button class="log">back</button></a>
     </div>
 
     <script>
@@ -204,33 +204,38 @@
       loginform.addEventListener("submit", function (event) {
         event.preventDefault();
         const users = JSON.parse(localStorage.getItem("users"));
-        const name = document.getElementById("id1").value;
+        console.log(users);
+        // const name = document.("id1").value;
         const email = document.getElementById("id2").value;
         // const number = document.getElementById("id3").value;
         const password = document.getElementById("id4").value;
         let checkin = false;
-        const userData = users.find(function (event) {
-          const email_id = event["user_email"];
-          // const num = event["user_number"];
-          const pass = event["user_password"];
-          if (email_id === email) {
+
+        let userData = users.find(function (user) {
+          const email_id = user["user_email"];
+          // const num = user["user_number"];
+
+          const pass = user["user_password"];
+          if (email_id == email && pass == password) {
             checkin = true;
-            if (pass === password) {
-              alert("success");
-              return checkin;
-            }
-            alert("incorrect password");
-            return checkin;
           }
         });
-        if (checkin === false) {
-          alert("invalid");
+        if (checkin == true) {
+          localStorage.setItem("profile", JSON.stringify(users));
+          let getUser = JSON.parse(localStorage.getItem("users"));
+          let getUserId = JSON.parse(localStorage.getItem("user_id"));
+          console.log(getUserId);
+          alert("User login successfully");
+          for (let i = 0; i < getUser.length; i++) {
+            if (getUser[i]["user_id"] == getUserId) {
+              window.location.href =
+                "../pages/homepage.html?user=" + getUser[i]["user_id"];
+            }
+          }
+          return checkin;
+        } else {
+          alert("Invalid");
         }
-
-        console.log(userData);
-        // alert("test");
-        localStorage.setItem("profile", JSON.stringify(userData["user_email"]));
-        window.location.href = "./homepage.html";
       });
     </script>
   </body>

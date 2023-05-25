@@ -3,8 +3,96 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-image: url(../images/tu_baclground.jpg);
+  background-color: lightgray;
+}
+body {
+  background-image: url(../images/index.background.png);
   background-size: cover;
+}
+nav {
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  display: flex;
+  box-shadow: 0px 1px 20px rgb(45, 44, 44);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: black;
+  z-index: 50;
+}
+/* #google_translate_element {
+    height: 20px;
+    width: 20px;
+  } */
+.snip1143 {
+  font-family: "Raleway", Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: transparent;
+}
+.snip1143 * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: transparent;
+}
+.snip1143 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+  background-color: transparent;
+}
+.snip1143 a {
+  padding: 0.3em 0;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.snip1143 a:before,
+.snip1143 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1143 a:before {
+  top: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #cfcccc;
+}
+.snip1143 a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+.snip1143 li:hover a,
+.snip1143 .current a {
+  transform: translateY(-100%);
+}
+.navbar {
+  /* margin-right: 50px; */
+  padding-right: 40px;
+}
+
+.logo img {
+  width: 83px;
+  height: 083px;
+  border-radius: 50px;
+  margin-left: 10px;
+  background-color: transparent;
 }
 .flip-card {
   background-color: transparent;
@@ -14,31 +102,30 @@
   font-family: "Roboto", sans-serif;
   margin-right: 75px;
 }
-
 .title {
   font-size: 1.8em;
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: white;
+  color: aliceblue;
   margin-bottom: 30px;
   margin-left: 30px;
   margin-top: -10px;
   letter-spacing: 2px;
-  background: none;
+  background-color: transparent;
   cursor: pointer;
 }
-.title-7 {
-  font-size: 1.8em;
+.title-5 {
+  font-size: 1.5em;
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: white;
-  margin-bottom: 30px;
-  margin-left: 30px;
-  margin-top: -10px;
+  color: aliceblue;
+  margin-bottom: 0px;
+  margin-left: 43px;
+  margin-top: 0px;
   letter-spacing: 2px;
-  background: none;
+  background-color: transparent;
   cursor: pointer;
 }
 .title-1 {
@@ -46,9 +133,9 @@
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: white;
+  color: rgb(201, 203, 205);
   margin-left: 30px;
-  background: none;
+  background-color: transparent;
   cursor: pointer;
 }
 .title-2 {
@@ -56,81 +143,31 @@
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: black;
+  color: rgb(201, 203, 205);
   margin-left: 30px;
-  background: none;
+  background-color: transparent;
   transition: 0.5s;
   cursor: pointer;
 }
 .title-2:hover {
   transform: scale(1.2);
-  color: black;
-  background: none;
+  color: whitesmoke;
 }
 .title-3 {
   font-size: 1.7em;
   font-weight: 900;
   text-align: center;
   margin: 0;
-  color: black;
+  color: aliceblue;
   margin-left: 30px;
-  background: none;
+  background-color: transparent;
   cursor: pointer;
   margin-bottom: 30px;
   letter-spacing: 1px;
-}
-.title-8 {
-  font-size: 1.7em;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
-  color: black;
-  margin-left: 30px;
-  background: none;
-  cursor: pointer;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-.title-9 {
-  font-size: 1.5em;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
-  color: black;
-  margin-left: 30px;
-  background: none;
-  transition: 0.5s;
-  cursor: pointer;
-}
-.title-9:hover {
-  transform: scale(1.2);
-  color: black;
-  background: none;
 }
 .title-4 {
   text-decoration: none;
-
-  background: none;
-}
-.title-5 {
-  font-size: 1.5em;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
-  color: white;
-  margin-left: 30px;
-  background: none;
-  cursor: pointer;
-}
-.title-6 {
-  font-size: 1.5em;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
-  color: white;
-  margin-left: 30px;
-  background: none;
-  cursor: pointer;
+  background-color: transparent;
 }
 .flip-card-inner {
   position: relative;
@@ -140,11 +177,9 @@
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 .flip-card-front,
 .flip-card-back {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -159,27 +194,26 @@
   border: 1px solid black;
   border-radius: 1rem;
 }
-
 .flip-card-front {
   background: radial-gradient(
     circle at -8.9% 51.2%,
-    rgb(251, 250, 250) 0%,
-    rgb(200, 199, 199) 15.9%,
-    rgb(167, 166, 166) 15.9%,
-    rgb(120, 120, 120) 24.4%,
-    rgb(58, 58, 58) 24.5%,
-    rgb(26, 27, 27) 66%
+    rgb(199, 61, 2) 0%,
+    rgb(255, 68, 0) 15.9%,
+    rgb(247, 122, 5) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
   );
 }
 .flip-card-back {
   background: radial-gradient(
     circle at -8.9% 51.2%,
-    rgb(2, 2, 2) 0%,
-    rgb(62, 62, 62) 15.9%,
-    rgb(93, 92, 92) 15.9%,
-    rgb(180, 179, 179) 24.4%,
-    rgb(233, 233, 234) 24.5%,
-    rgb(234, 236, 236) 66%
+    rgb(199, 61, 2) 0%,
+    rgb(255, 68, 0) 15.9%,
+    rgb(247, 122, 5) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
   );
   transform: rotateY(180deg);
 }
@@ -189,7 +223,7 @@
   margin-top: 270px;
 }
 .flip-card-2 {
-  background: none;
+  background-color: transparent;
   width: 250px;
   height: 300px;
   perspective: 1000px;
@@ -204,11 +238,9 @@
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
 .flip-card-2:hover .flip-card-inner-2 {
   transform: rotateY(180deg);
 }
-
 .flip-card-front-2,
 .flip-card-back-2 {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -223,28 +255,26 @@
   border: 1px solid black;
   border-radius: 1rem;
 }
-
 .flip-card-front-2 {
   background: radial-gradient(
     circle at -8.9% 51.2%,
-    rgb(251, 250, 250) 0%,
-    rgb(200, 199, 199) 15.9%,
-    rgb(167, 166, 166) 15.9%,
-    rgb(120, 120, 120) 24.4%,
-    rgb(58, 58, 58) 24.5%,
-    rgb(26, 27, 27) 66%
+    rgb(199, 61, 2) 0%,
+    rgb(255, 68, 0) 15.9%,
+    rgb(247, 122, 5) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
   );
 }
-
 .flip-card-back-2 {
   background: radial-gradient(
     circle at -8.9% 51.2%,
-    rgb(2, 2, 2) 0%,
-    rgb(62, 62, 62) 15.9%,
-    rgb(93, 92, 92) 15.9%,
-    rgb(180, 179, 179) 24.4%,
-    rgb(233, 233, 234) 24.5%,
-    rgb(234, 236, 236) 66%
+    rgb(199, 61, 2) 0%,
+    rgb(255, 68, 0) 15.9%,
+    rgb(247, 122, 5) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
   );
   transform: rotateY(180deg);
 }

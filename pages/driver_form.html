@@ -18,8 +18,41 @@
     <title>driver_form</title>
   </head>
   <body>
-    <header></header>
-    <section>
+    <header>
+      <!-- header part -->
+      <div class="logo">
+        <img src="../assets/images/Turbo trip.png" alt="logo" />
+      </div>
+      <div class="name">Turbo trip</div>
+      <ul class="snip1143">
+        <!-- <li class="current"><a href="#" data-hover="Home">Home</a></li> -->
+        <li>
+          <a href="../pages/About us.html" data-hover="About Us">About Us</a>
+        </li>
+        <li><a href="#" data-hover="Blog">Blog</a></li>
+        <li><a href="#" data-hover="Services">Services</a></li>
+        <li><a href="#" data-hover="Products">Products</a></li>
+        <li>
+          <a href="../pages/contact us.html" data-hover="Contact us"
+            >Contact us</a
+          >
+        </li>
+        <li><a href="../index.html" data-hover="Back">Back</a></li>
+      </ul>
+
+      <div class="navbar">
+        <a href="../pages/login.html"><button class="bton">logout</button></a>
+      </div>
+      <div class="user_profile">
+        <a href="./dri_profile.html">
+          <img
+            src="../assets/images/gpro.png"
+            alt="use_pro"
+            class="user_profile1"
+        /></a>
+      </div>
+    </header>
+    <section class="box">
       <div class="drive_3">
         <p class="cont_6">Drive to fulfil your dreams</p>
       </div>
@@ -37,30 +70,45 @@
           </div>
         </div>
         <div class="drive_2">
-          <form>
+          <form id="new_driver_information">
             <div class="content_3">
-              <label>NAME</label>
+              <label><b>NAME</b></label>
               <input
                 type="text"
                 name
                 placeholder="Enter your full name"
                 class="nam_1"
+                id="new_dri"
+                required
+              />
+            </div>
+            <div class="content_3">
+              <label><b>Profile-Image</b></label>
+              <input
+                type="url"
+                name
+                placeholder="Enter your URL "
+                class="nam_1"
+                id="new_dri7"
+                required
               />
             </div>
             <div class="cont_3">
               <div class="cont_4">
-                <label>PHONE</label>
+                <label><b>PHONE</b></label>
                 <input
                   type="text"
                   maxlength="10"
                   name
                   placeholder="Enter your Number"
                   class="nam_2"
+                  id="new_dri1"
+                  required
                 />
               </div>
 
               <div class="cont_5">
-                <select class="cont-6">
+                <!-- <select class="cont-6">
                   <option value="0">Chennai</option>
                   <option value="1">Chennai</option>
                   <option value="2">Chennai</option>
@@ -75,14 +123,74 @@
                   <option value="11">Chennai</option>
                   <option value="12">Chennai</option>
                   <option value="13">Chennai</option>
-                </select>
+                </select> -->
+                <label><b>AGE</b></label>
+                <input
+                  type="age"
+                  maxlength="03"
+                  name
+                  placeholder="Enter your Age"
+                  class="nam_2"
+                  id="new_dri2"
+                  required
+                />
               </div>
             </div>
-            <div class="content_4">
-              <button type="submit" class="sub_1">
-                Submit Your Application
-              </button>
+            <div class="car-con">
+              <div class="cont_4">
+                <label><b>Car-Model</b></label>
+                <input
+                  type="name"
+                  maxlength="15"
+                  name
+                  placeholder="Model-name"
+                  class="nam_2"
+                  id="new_dri3"
+                  required
+                />
+              </div>
+              <div class="cont_4">
+                <label><b>License plate</b></label>
+                <input
+                  type="name"
+                  maxlength="15"
+                  name
+                  placeholder="car-no"
+                  class="nam_2"
+                  id="new_dri4"
+                  required
+                />
+              </div>
             </div>
+            <div class="car-con_1">
+              <div class="cont_4">
+                <label><b>Departure time</b></label>
+                <input
+                  type="name"
+                  maxlength="8"
+                  name
+                  placeholder="Time"
+                  class="nam_2"
+                  id="new_dri5"
+                  required
+                />
+              </div>
+              <div class="cont_4">
+                <label><b>Location</b></label>
+                <input
+                  type="name"
+                  maxlength="15"
+                  name
+                  placeholder="place"
+                  class="nam_2"
+                  id="new_dri6"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="content_4"></div>
+            <button type="submit" class="sub_1">Submit Your Application</button>
           </form>
         </div>
       </div>
@@ -376,4 +484,44 @@
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"
   ></script>
+  <script>
+    const new_driver = document.getElementById("new_driver_information");
+    new_driver.addEventListener("submit", function (event) {
+      event.preventDefault();
+      // array
+      let new_Driver = [];
+      // function
+      if (localStorage.getItem("new_Driver") != null) {
+        new_Driver = JSON.parse(localStorage.getItem("new_Driver"));
+      }
+
+      const new_driver_name = document.getElementById("new_dri").value;
+      const new_driver_Img = document.getElementById("new_dri7").value;
+      const new_driver_phone = document.getElementById("new_dri1").value;
+      const new_driver_age = document.getElementById("new_dri2").value;
+      const new_driver_car = document.getElementById("new_dri3").value;
+      const new_driver_numplate = document.getElementById("new_dri4").value;
+      const new_driver_Departure = document.getElementById("new_dri5").value;
+      const new_driver_location = document.getElementById("new_dri6").value;
+      const new_driver_id = Date.now();
+      let validation_error = false;
+      let new_Driver_data = {
+        new_driver_name,
+        new_driver_Img,
+        new_driver_phone,
+        new_driver_age,
+        new_driver_car,
+        new_driver_numplate,
+        new_driver_Departure,
+        new_driver_location,
+        new_driver_id,
+      };
+      console.log(new_Driver_data);
+      new_Driver.push(new_Driver_data);
+      alert("Successfully Added your Details");
+      // let get_data = JSON.parse(localStorage.getItem("new_Driver"));
+      localStorage.setItem("new_Driver", JSON.stringify(new_Driver));
+      location.reload();
+    });
+  </script>
 </html>

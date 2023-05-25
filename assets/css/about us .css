@@ -3,26 +3,23 @@
   font-family: "Barlow", sans-serif;
 }
 /* header part */
-header {
+nav {
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 300px;
   display: flex;
-
-  box-shadow: 0px 1px 20px rgb(135, 135, 135);
-
-  background-color: rgb(22, 21, 21);
-}
-header {
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  display: flex;
-
   box-shadow: 0px 1px 20px rgb(45, 44, 44);
-
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
   background-color: black;
+  z-index: 50;
 }
+/* #google_translate_element {
+  height: 20px;
+  width: 20px;
+} */
 .snip1143 {
   font-family: "Raleway", Arial, sans-serif;
   text-align: center;
@@ -73,41 +70,25 @@ header {
   white-space: nowrap;
 }
 .snip1143 li:hover a,
-.snip1143 .a-hover a {
+.snip1143 .current a {
   transform: translateY(-100%);
 }
-
 .navbar {
   /* margin-right: 50px; */
   padding-right: 40px;
 }
-.name {
-  font-size: 30px;
-  font-weight: bolder;
-  color: whitesmoke;
+.user_profile1 {
+  height: 50px;
+  width: 50px;
+  margin-right: 30px;
 }
 .logo img {
-  width: 75px;
-  height: 075px;
+  width: 83px;
+  height: 083px;
   border-radius: 50px;
-  margin-left: 50px;
+  margin-left: 10px;
 }
-.button {
-  width: 150px;
-  height: 40px;
-  /* margin-right: 100px; */
-  background-color: goldenrod;
-  color: black;
-  border: none;
-  border-radius: 10px;
-  font-size: 19px;
-}
-button:hover {
-  background-color: black;
-  color: goldenrod;
-  transition: 1s;
-  border: none;
-}
+
 .about {
   background-image: url(../images/about-5.jpg);
   background-size: cover;

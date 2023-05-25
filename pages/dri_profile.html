@@ -12,7 +12,37 @@
 
     <title>Document</title>
   </head>
+  
   <body>
+    <nav id="js_header">
+      <!-- header part -->
+      <div class="logo">
+        <img src="../assets/images/Turbo trip.png" alt="logo" />
+      </div>
+      <ul class="snip1143">
+        <li class="current"><a href="#" data-hover="Home">Home</a></li>
+        <li>
+          <a href="../pages/About us.html" data-hover="About Us">About Us</a>
+        </li>
+        <li>
+          <a href="../pages/collapse.html" data-hover="Notification"
+            >Notification</a
+          >
+        </li>
+        <li>
+          <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
+        </li>
+      </ul>
+
+      <div class="user_profile">
+        <a href="./profilepage-1.html">
+          <img
+            src="../assets/images/gpro.png"
+            alt="use_pro"
+            class="user_profile1"
+        /></a>
+      </div>
+    </nav>
     <div class="card">
       <div class="card-header">
         <div class="text-header">Driver-Profile</div>
@@ -115,8 +145,13 @@
                 <option value="usa">USA</option>
               </select>
             </div>
-            <button type="submit" class="btn">submit</button>
-            <button id="delete" class="btn">delete</button>
+            <div class="buton">
+              <button type="submit" class="btn">submit</button>
+              <button id="delete" class="btn">delete</button>
+              <button id="log_out" type="click" class="logOut_btn">
+                Logout
+              </button>
+            </div>
           </div>
         </form>
       </div>
@@ -217,5 +252,6 @@
         }
       });
     </script>
+    <script></script>
   </body>
 </html>

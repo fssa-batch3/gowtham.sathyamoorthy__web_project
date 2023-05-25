@@ -14,6 +14,35 @@
     <title>Drive</title>
   </head>
   <body>
+    <nav id="js_header">
+      <!-- header part -->
+      <div class="logo">
+        <img src="../assets/images/Turbo trip.png" alt="logo" />
+      </div>
+      <ul class="snip1143">
+        <li class="current"><a href="#" data-hover="Home">Home</a></li>
+        <li>
+          <a href="../pages/About us.html" data-hover="About Us">About Us</a>
+        </li>
+        <li class="notification-li">
+          <a href="../pages/dri_notify.html" data-hover="Notification"
+            >Notification</a
+          >
+        </li>
+        <li>
+          <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
+        </li>
+      </ul>
+
+      <div class="user_profile">
+        <a href="../pages/dri_profile.html">
+          <img
+            src="../assets/images/gpro.png"
+            alt="use_pro"
+            class="user_profile1"
+        /></a>
+      </div>
+    </nav>
     <section>
       <div
         id="carouselExampleIndicators"
@@ -101,7 +130,7 @@
           />
           <p class="part_4">Know driving?</p>
           <h2 class="part_6">We've a car for you!</h2>
-          <a href="" class="form_btn1">I need a Car</a>
+          <a href="./driver_form.html" class="form_btn1">I need a Car</a>
         </div>
 
         <div class="p_2">
@@ -145,5 +174,24 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/js/nav.js"></script>
+    <script>
+      let notification = JSON.parse(localStorage.getItem("bookings"));
+
+      let notificationData = notification.filter((e) => e["isread"] == false);
+      console.log(notificationData);
+
+      let notificationLength = notificationData.length;
+
+      console.log(notificationLength);
+
+      if (notificationLength !== 0) {
+        let para = document.createElement("p");
+        para.innerHTML = notificationLength;
+        para.setAttribute("class", "notification-para");
+        document.querySelector(".notification-li").append(para);
+      }
+    </script>
   </body>
 </html>
+notification-li

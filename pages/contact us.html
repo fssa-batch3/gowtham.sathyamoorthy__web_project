@@ -9,30 +9,26 @@
   </head>
   <body>
     <div>
-      <header>
+      <nav id="js_header">
         <!-- header part -->
         <div class="logo">
           <img src="../assets/images/Turbo trip.png" alt="logo" />
         </div>
-        <div class="name">Turbo trip</div>
         <ul class="snip1143">
-          <li class="con-hover">
-            <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
-          </li>
-        
+          <li class="current"><a href="#" data-hover="Home">Home</a></li>
           <li>
             <a href="../pages/About us.html" data-hover="About Us">About Us</a>
           </li>
-          <li><a href="#" data-hover="Blog">Blog</a></li>
-          <li><a href="#" data-hover="Services">Services</a></li>
-          <li><a href="#" data-hover="Products">Products</a></li>
-          <li class="current">
-            <a href="./homepage.html" data-hover="Home">Home</a>
+          <li>
+            <a href="../pages/collapse.html" data-hover="Notification"
+              >Notification</a
+            >
+          </li>
+          <li>
+            <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
           </li>
         </ul>
-        <div class="navbar">
-          <a href="../pages/login.html"><button class="bton">login</button></a>
-        </div>
+  
         <div class="user_profile">
           <a href="./profilepage-1.html">
             <img
@@ -41,7 +37,7 @@
               class="user_profile1"
           /></a>
         </div>
-      </header>
+      </nav>
     </div>
     <div class="contact">Get in touch with Us</div>
     <div class="section">
@@ -66,23 +62,24 @@
       <div class="information">
         <div class="info">Leave a message</div>
         <div class="input-container">
-          <input type="text" id="input" required="" />
+          <input type="text" id="sender_name" required="" />
           <label for="input" class="label">Name</label>
           <div class="underline"></div>
         </div>
         <div class="input-container">
-          <input type="text" id="input" required="" />
+          <input type="text" id="phone" required="" />
           <label for="input" class="label">phone </label>
           <div class="underline"></div>
         </div>
         <div class="input-container">
-          <input type="text" id="input" required="" />
+          <input type="text" id="email" required="" />
           <label for="input" class="label">e-mail</label>
           <div class="underline"></div>
         </div>
         <div class="input-container1">
-          <input type="text" id="input" required="" />
+          <input type="text" id="user_msg" required="" />
           <label for="input" class="label">Write a message</label>
+          <button class="subm" type="submit" id="submit">Submit</button>
           <div class="underline"></div>
         </div>
       </div>
@@ -168,5 +165,37 @@
         © 2022 Turbo Transportation. All rights reserved.
       </div>
     </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("PATZbuWOrgn94p2I7");
+    </script>
+
+    <script>
+      let send_name = document.getElementById("sender_name");
+      let send_phone = document.getElementById("phone").value;
+      let send_email = document.getElementById("email");
+      let send_msg = document.getElementById("user_msg");
+
+      let contact = document.getElementById("submit");
+      console.log(contact);
+      contact.addEventListener("click", function (event) {
+        console.log(true);
+        let email = document.getElementById("email").value;
+        emailjs.send("service_2ji3hvq", "template_o2l7i4i", {
+          name: send_name.value,
+          from: send_email.value,
+          message: send_msg.value,
+        });
+        console.log(true);
+        window.location.reload();
+        return alert("send the mail to the Turbo trip");
+      });
+    </script>
   </body>
+
 </html>

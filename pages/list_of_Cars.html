@@ -12,6 +12,37 @@
     <title>Document</title>
   </head>
   <body>
+    <nav id="js_header">
+      <!-- header part -->
+      <div class="logo">
+        <img src="../assets/images/Turbo trip.png" alt="logo" />
+      </div>
+      <ul class="snip1143">
+        <li class="current">
+          <a href="../pages/drive_with_us.html" data-hover="Home">Home</a>
+        </li>
+        <li>
+          <a href="../pages/About us.html" data-hover="About Us">About Us</a>
+        </li>
+        <li>
+          <a href="../pages/collapse.html" data-hover="Notification"
+            >Notification</a
+          >
+        </li>
+        <li>
+          <a href="../pages/contact us.html" data-hover="Contact">Contact</a>
+        </li>
+      </ul>
+
+      <div class="user_profile">
+        <a href="../pages/dri_profile.html">
+          <img
+            src="../assets/images/gpro.png"
+            alt="use_pro"
+            class="user_profile1"
+        /></a>
+      </div>
+    </nav>
     <link rel="stylesheet" href="../pages/list_of_Cars.html" />
     <div id="c_details">
       <!-- <div class="card">
@@ -38,71 +69,78 @@
     let car_name = JSON.parse(localStorage.getItem("Cars_list"));
     console.log(car_name);
 
-    for (let i = 0; i < car_name.length; i++) {
-      let div_card = document.createElement("div");
-      div_card.setAttribute("class", "card");
-      console.log(div_card);
+    if (car_name === null) {
+      let body = document.querySelector("body");
+      body.innerText = "This Page Is Empty";
+    } else {
+      for (let i = 0; i < car_name.length; i++) {
+        let div_card = document.createElement("div");
+        div_card.setAttribute("class", "card");
+        console.log(div_card);
 
-      let img = document.createElement("div");
-      img.setAttribute("class", "image");
-      div_card.append(img);
-      //   console.log(img);
+        let img = document.createElement("div");
+        img.setAttribute("class", "image");
+        div_card.append(img);
+        //   console.log(img);
 
-      let link = document.createElement("a");
-      link.setAttribute("class", "a_link");
-      img.append(link);
-      //   console.log(link);
+        let link = document.createElement("a");
+        link.setAttribute("class", "a_link");
+        img.append(link);
+        //   console.log(link);
 
-      let imge = document.createElement("img");
-      imge.setAttribute("class", "img");
-      imge.setAttribute("src", car_name[i]["Image"]);
-      link.append(imge);
-      //   console.log(imge);
+        let imge = document.createElement("img");
+        imge.setAttribute("class", "img");
+        imge.setAttribute("src", car_name[i]["Image"]);
+        link.append(imge);
+        //   console.log(imge);
 
-      let div_1 = document.createElement("div");
-      div_1.setAttribute("class", "heading");
-      div_card.append(div_1);
-      //   console.log(div_1);
+        let div_1 = document.createElement("div");
+        div_1.setAttribute("class", "heading");
+        div_card.append(div_1);
+        //   console.log(div_1);
 
-      let para = document.createElement("h1");
-      para.setAttribute("class", "content_para");
-      para.innerText = car_name[i]["Vehicle_model"];
-      div_1.append(para);
-      //   console.log(para);
+        let para = document.createElement("h1");
+        para.setAttribute("class", "content_para");
+        para.innerText = "Model : " + car_name[i]["Vehicle_model"];
+        div_1.append(para);
+        //   console.log(para);
+        let car_no = document.createElement("h2");
+        car_no.setAttribute("class", "car_num");
 
-      let description = document.createElement("div");
-      description.setAttribute("class", "desc");
+        car_no.innerText = "car no :" + car_name[i]["Vehicle_no"];
+        let description = document.createElement("div");
+        description.setAttribute("class", "desc");
 
-      para.append(description);
-      //   console.log(para);
+        para.append(description);
+        //   console.log(para);
 
-      let desc_car = document.createElement("p");
-      desc_car.setAttribute("class", "desc_1");
-      desc_car.innerText = car_name[i]["Description"];
-      description.append(desc_car);
-      //   console.log(desc_car);
+        let desc_car = document.createElement("p");
+        desc_car.setAttribute("class", "desc_1");
+        desc_car.innerText = "Description : " + car_name[i]["Description"];
+        description.append(desc_car);
+        //   console.log(desc_car);
 
-      let btn_sub = document.createElement("button");
-      btn_sub.setAttribute("class", "button");
-      btn_sub.innerText = "edit";
-      btn_sub.setAttribute("id", car_name[i]["car_id"]);
-      btn_sub.setAttribute("onclick", "editcar(this.id)");
+        let btn_sub = document.createElement("button");
+        btn_sub.setAttribute("class", "button");
+        btn_sub.innerText = "edit";
+        btn_sub.setAttribute("id", car_name[i]["car_id"]);
+        btn_sub.setAttribute("onclick", "editcar(this.id)");
 
-      description.append(btn_sub);
-      //   console.log(btn_sub);
+        description.append(btn_sub);
+        //   console.log(btn_sub);
 
-      let container = document.getElementById("c_details");
-      container.append(div_card);
-    }
-    let arr = [];
-    a;
-    function editcar(id) {
-      arr.push(id);
-      console.log(id);
-      localStorage.setItem("edt_car", JSON.stringify(arr));
-      window.location.href = "./list+of_cars_edit.html?detail=" + id;
-    }
-    // let edit = document.querySelectorAll("button.button");
+        let container = document.getElementById("c_details");
+        container.append(div_card);
+      }
+      let arr = [];
+
+      function editcar(id) {
+        arr.push(id);
+        console.log(id);
+        localStorage.setItem("edt_car", JSON.stringify(arr));
+        window.location.href = "./list+of_cars_edit.html?detail=" + id;
+      }
+    } // let edit = document.querySelectorAll("button.button");
     // edit.forEach(function (find) {
     //   find.addEventListener("click", function () {
     //     let new_car = this.closest(".card");

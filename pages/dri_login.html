@@ -152,10 +152,10 @@
         <p class="P-1">Welcome back! My Partner</p>
       </div>
       <form id="log_in information">
-        <div class="name">
+        <!-- <div class="name">
           <label>Full-name</label><br />
           <input type="Name" id="id1" placeholder="Name" required />
-        </div>
+        </div> -->
         <div class="email">
           <label>Email-id</label><br />
           <input
@@ -181,9 +181,11 @@
         </div>
       </form>
       <div class="sign">
-        <a href="./sign-in.html">Don't have an account ? sign in here</a>
+        <a href="../pages/dri_sigin.html"
+          >Don't have an account ? Sign up here</a
+        >
       </div>
-      <a href="./sign-in.html"> <button class="log">back</button></a>
+      <a href="../pages/homepage.html"> <button class="log">back</button></a>
     </div>
 
     <script>
@@ -193,7 +195,7 @@
       loginform.addEventListener("submit", function (event) {
         event.preventDefault();
         const Drivers = JSON.parse(localStorage.getItem("Drivers"));
-        const name = document.getElementById("id1").value;
+        // const name = document.getElementById("id1").value;
         const email = document.getElementById("id2").value;
         // const number = document.getElementById("id3").value;
         const password = document.getElementById("id4").value;
@@ -204,9 +206,10 @@
           const pass = event["Driver_password"];
           if (email_1 === email) {
             checkin = true;
-            if (pass === password) {
-              alert("success");
-              window.location.href = "../pages/drive with us.html";
+            if (pass == password) {
+              alert("Driver login successfully");
+              window.location.href = "../pages/drive_with_us.html";
+              localStorage.setItem("loginDriver", event["Driver_id"]);
               return checkin;
             }
             alert("incorrect password");
@@ -218,10 +221,10 @@
         }
 
         console.log(driverData);
-        localStorage.setItem(
-          "Dri_profile",
-          JSON.stringify(driverData["Driver_email"])
-        );
+        // localStorage.setItem(
+        //   "Dri_profile",
+        //   JSON.stringify(driverData["Driver_email"])
+        // );
       });
     </script>
   </body>
