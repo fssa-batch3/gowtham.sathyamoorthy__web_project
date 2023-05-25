@@ -5,6 +5,95 @@
   box-sizing: border-box;
   background-color: lightgray;
 }
+body {
+  background-image: url(../images/index.background.png);
+  background-size: cover;
+}
+nav {
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  display: flex;
+  box-shadow: 0px 1px 20px rgb(45, 44, 44);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: black;
+  z-index: 50;
+}
+/* #google_translate_element {
+    height: 20px;
+    width: 20px;
+  } */
+.snip1143 {
+  font-family: "Raleway", Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: transparent;
+}
+.snip1143 * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: transparent;
+}
+.snip1143 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+  background-color: transparent;
+}
+.snip1143 a {
+  padding: 0.3em 0;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.snip1143 a:before,
+.snip1143 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1143 a:before {
+  top: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #cfcccc;
+}
+.snip1143 a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+.snip1143 li:hover a,
+.snip1143 .current a {
+  transform: translateY(-100%);
+}
+.navbar {
+  /* margin-right: 50px; */
+  padding-right: 40px;
+}
+
+.logo img {
+  width: 83px;
+  height: 083px;
+  border-radius: 50px;
+  margin-left: 10px;
+  background-color: transparent;
+}
 .flip-card {
   background-color: transparent;
   width: 250px;
@@ -13,7 +102,6 @@
   font-family: "Roboto", sans-serif;
   margin-right: 75px;
 }
-
 .title {
   font-size: 1.8em;
   font-weight: 900;
@@ -23,6 +111,19 @@
   margin-bottom: 30px;
   margin-left: 30px;
   margin-top: -10px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.title-5 {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  color: aliceblue;
+  margin-bottom: 0px;
+  margin-left: 43px;
+  margin-top: 0px;
   letter-spacing: 2px;
   background-color: transparent;
   cursor: pointer;
@@ -76,11 +177,9 @@
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 .flip-card-front,
 .flip-card-back {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -95,7 +194,6 @@
   border: 1px solid black;
   border-radius: 1rem;
 }
-
 .flip-card-front {
   background: radial-gradient(
     circle at -8.9% 51.2%,
@@ -140,11 +238,9 @@
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
 .flip-card-2:hover .flip-card-inner-2 {
   transform: rotateY(180deg);
 }
-
 .flip-card-front-2,
 .flip-card-back-2 {
   box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -159,7 +255,6 @@
   border: 1px solid black;
   border-radius: 1rem;
 }
-
 .flip-card-front-2 {
   background: radial-gradient(
     circle at -8.9% 51.2%,
@@ -171,7 +266,6 @@
     rgb(19, 30, 37) 66%
   );
 }
-
 .flip-card-back-2 {
   background: radial-gradient(
     circle at -8.9% 51.2%,

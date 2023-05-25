@@ -73,40 +73,35 @@
         color: goldenrod;
         font-size: 20px;
         margin-left: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
       .password {
         color: goldenrod;
         font-size: 20px;
         margin-left: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
       #id1 {
         color: goldenrod;
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
       #id2 {
         color: goldenrod;
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
-      #id3 {
-        color: goldenrod;
-        border-bottom: 3px solid goldenrod;
-        border-right: 3px solid goldenrod;
-        color: goldenrod;
-        border-bottom: 3px solid goldenrod;
-        border-right: 3px solid goldenrod;
-        outline-style: none;
-      }
+
       #id4 {
         color: goldenrod;
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
       .photo {
         width: 100px;
@@ -120,12 +115,27 @@
         font-weight: bolder;
         margin-top: -2%;
       }
+      .P-1 {
+        color: goldenrod;
+        margin-left: 85px;
+        font-weight: bolder;
+        margin-top: -2%;
+        font-size: 20px;
+      }
       .sign a {
-        margin-left: 50px;
+        margin-left: 80px;
         color: goldenrod;
       }
       ::placeholder {
         color: goldenrod;
+      }
+      .log {
+        margin-left: 7rem;
+        font-size: 1rem;
+        font-weight: bolder;
+        width: 10rem;
+        height: 2rem;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -139,20 +149,27 @@
           class="photo"
         />
         <h1>Login Here</h1>
+        <p class="P-1">Welcome back! My Partner</p>
       </div>
       <form id="log_in information">
-        <div class="name">
+        <!-- <div class="name">
           <label>Full-name</label><br />
           <input type="Name" id="id1" placeholder="Name" required />
-        </div>
+        </div> -->
         <div class="email">
           <label>Email-id</label><br />
-          <input type="text" id="id2" placeholder="Email-id" />
+          <input
+            type="text"
+            id="id2"
+            placeholder="Email-id"
+            pattern=".+@gmail\.com"
+            required
+          />
         </div>
-        <div class="email">
+        <!-- <div class="email">
           <label>Contact-no</label><br />
           <input type="number" id="id3" placeholder="ph" required />
-        </div>
+        </div> -->
         <div class="password">
           <label>Password</label><br />
           <input type="password" id="id4" placeholder="password" required />
@@ -164,8 +181,11 @@
         </div>
       </form>
       <div class="sign">
-        <a href="./sign-in.html">Don't have an account ?</a>
+        <a href="../pages/dri_sigin.html"
+          >Don't have an account ? Sign up here</a
+        >
       </div>
+      <a href="../pages/homepage.html"> <button class="log">back</button></a>
     </div>
 
     <script>
@@ -175,20 +195,21 @@
       loginform.addEventListener("submit", function (event) {
         event.preventDefault();
         const Drivers = JSON.parse(localStorage.getItem("Drivers"));
-        const name = document.getElementById("id1").value;
+        // const name = document.getElementById("id1").value;
         const email = document.getElementById("id2").value;
-        const number = document.getElementById("id3").value;
+        // const number = document.getElementById("id3").value;
         const password = document.getElementById("id4").value;
         let checkin = false;
         const driverData = Drivers.find(function (event) {
-          const email = event["Driver_email"];
-          const num = event["Driver_number"];
+          const email_1 = event["Driver_email"];
+          // const num = event["Driver_number"];
           const pass = event["Driver_password"];
-          if (num === number) {
+          if (email_1 === email) {
             checkin = true;
-            if (pass === password) {
-              alert("success");
-              window.location.href = "../pages/openingpage.html";
+            if (pass == password) {
+              alert("Driver login successfully");
+              window.location.href = "../pages/drive_with_us.html";
+              localStorage.setItem("loginDriver", event["Driver_id"]);
               return checkin;
             }
             alert("incorrect password");
@@ -200,10 +221,10 @@
         }
 
         console.log(driverData);
-        localStorage.setItem(
-          "profile",
-          JSON.stringify(driverData["Driver_email"])
-        );
+        // localStorage.setItem(
+        //   "Dri_profile",
+        //   JSON.stringify(driverData["Driver_email"])
+        // );
       });
     </script>
   </body>

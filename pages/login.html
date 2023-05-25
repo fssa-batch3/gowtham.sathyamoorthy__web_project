@@ -86,27 +86,22 @@
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
       #id2 {
         color: goldenrod;
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
-      #id3 {
-        color: goldenrod;
-        border-bottom: 3px solid goldenrod;
-        border-right: 3px solid goldenrod;
-        color: goldenrod;
-        border-bottom: 3px solid goldenrod;
-        border-right: 3px solid goldenrod;
-        outline-style: none;
-      }
+
       #id4 {
         color: goldenrod;
         border-bottom: 3px solid goldenrod;
         border-right: 3px solid goldenrod;
         outline-style: none;
+        width: 250px;
       }
       .photo {
         width: 100px;
@@ -120,12 +115,27 @@
         font-weight: bolder;
         margin-top: -2%;
       }
+      .p-1 {
+        color: goldenrod;
+        margin-left: 70px;
+        font-weight: bolder;
+        margin-top: -2%;
+        font-size: 20px;
+      }
       .sign a {
-        margin-left: 50px;
+        margin-left: 70px;
         color: goldenrod;
       }
       ::placeholder {
         color: goldenrod;
+      }
+      .log {
+        margin-left: 7rem;
+        font-size: 1rem;
+        font-weight: bolder;
+        width: 10rem;
+        height: 2rem;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -139,33 +149,52 @@
           class="photo"
         />
         <h1>Login Here</h1>
+        <p class="p-1">Welcome back ! Our Customer</p>
       </div>
       <form id="log_in information">
-        <div class="name">
+        <!-- <div class="name">
           <label>Full-name</label><br />
-          <input type="Name" id="id1" placeholder="Name" required />
-        </div>
+          <input
+            type="Name"
+            id="id1"
+            placeholder="Name"
+            pattern="[A-Za-z]{1,15}$"
+            required
+          />
+        </div> -->
         <div class="email">
           <label>Email-id</label><br />
-          <input type="text" id="id2" placeholder="Email-id" />
+          <input
+            type="text"
+            id="id2"
+            placeholder="Email-id"
+            pattern=".+@gmail\.com"
+            required
+          />
         </div>
-        <div class="email">
-          <label>Contact-no</label><br />
-          <input type="number" id="id3" placeholder="ph" required />
-        </div>
+
         <div class="password">
           <label>Password</label><br />
-          <input type="password" id="id4" placeholder="password" required />
+          <input
+            type="password"
+            id="id4"
+            placeholder="password"
+            required
+            pattern="[a-zA-Z0-9]{8,15}$"
+          />
         </div>
 
         <div class="button">
-          <button class="btn1">sign-in</button>
-          <button class="btn1" type="button">Forgot password?</button>
+          <button class="btn1" type="submit">sign-in</button>
+          <a href="./forgot_pass.html">
+            <button class="btn1">Forgot password?</button></a
+          >
         </div>
       </form>
       <div class="sign">
-        <a href="./sign-in.html">Don't have an account ?</a>
+        <a href="./sign-in.html">Don't have an account ? Signup here </a>
       </div>
+      <a href="./index.html"> <button class="log">back</button></a>
     </div>
 
     <script>
@@ -175,32 +204,38 @@
       loginform.addEventListener("submit", function (event) {
         event.preventDefault();
         const users = JSON.parse(localStorage.getItem("users"));
-        const name = document.getElementById("id1").value;
+        console.log(users);
+        // const name = document.("id1").value;
         const email = document.getElementById("id2").value;
-        const number = document.getElementById("id3").value;
+        // const number = document.getElementById("id3").value;
         const password = document.getElementById("id4").value;
         let checkin = false;
-        const userData = users.find(function (event) {
-          const email = event["user_email"];
-          const num = event["user_number"];
-          const pass = event["user_password"];
-          if (num === number) {
+
+        let userData = users.find(function (user) {
+          const email_id = user["user_email"];
+          // const num = user["user_number"];
+
+          const pass = user["user_password"];
+          if (email_id == email && pass == password) {
             checkin = true;
-            if (pass === password) {
-              alert("success");
-              return checkin;
-            }
-            alert("incorrect password");
-            return checkin;
           }
         });
-        if (checkin === false) {
-          alert("invalid");
+        if (checkin == true) {
+          localStorage.setItem("profile", JSON.stringify(users));
+          let getUser = JSON.parse(localStorage.getItem("users"));
+          let getUserId = JSON.parse(localStorage.getItem("user_id"));
+          console.log(getUserId);
+          alert("User login successfully");
+          for (let i = 0; i < getUser.length; i++) {
+            if (getUser[i]["user_id"] == getUserId) {
+              window.location.href =
+                "../pages/homepage.html?user=" + getUser[i]["user_id"];
+            }
+          }
+          return checkin;
+        } else {
+          alert("Invalid");
         }
-
-        console.log(userData);
-        localStorage.setItem("profile", JSON.stringify(userData["user_email"]));
-        window.location.href = "index.html";
       });
     </script>
   </body>

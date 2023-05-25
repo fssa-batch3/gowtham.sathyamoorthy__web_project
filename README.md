@@ -15,7 +15,7 @@ In java script wrok:
 
 // My Progress Table
 
-CRUD For User signning page
+Module For User signning page
 
 => Create user account [completed]
 
@@ -25,12 +25,77 @@ CRUD For User signning page
 
 => Delete user details For deactivate [completed]
 
-CRUD For User Features page
+Module For driver signning page
 
-=> Create products card/list [completed] end_date (28-02-2023)
+=> Create driver account  [completed] end_date (28-02-2023)
 
-=> Read Product Data For card [completed] end_date(28-02-2023)
+=> Read driver data for profile page [completed] end_date(28-02-2023)
 
-=> Update user details For card [completed] end_date(03-03-2023)
+=> Update driver details[completed] end_date(03-03-2023)
 
-=> Deactivate Product details For Card [completed] end_date(03-03-2023)
+=> Delete driver details for deactive [completed] end_date(03-03-2023)
+
+Module For Car Adding
+
+=> Add new car [completed]
+
+=> Read Car details  [completed]
+
+=> Update car details  [completed]
+
+=> Delete car deails  [pending]
+
+CARPOOLING AND TAXI'S FEATURE:
+
+CUSTOMER
+
+Create an account For User:
+
+Scenario 1: Successfully create an account
+Steps:
+
+a. Navigate to the registration page.
+
+b. Enter the required information such as name, email, and password.
+
+c. Click the "Create Account" button.
+
+   Expected Result:
+The user is redirected to the login page.
+
+
+DRIVER
+
+Create an account For Driver:
+
+Scenario 1: Successfully create an account
+Steps:
+
+a. Navigate to the registration page.
+
+b. Enter the required Driver's information such as name, email, and password.
+
+c. Click the "Create Account" button.
+
+   Expected Result:
+The user is redirected to the login page.
+
+ADMIN
+
+Add Car details:
+
+Scenario 1: Successfully add car details to card
+Steps:
+
+Log in as a Admin.
+
+a. Navigate to the car listing page.
+
+b. Select a car details to add to card.
+
+c. Click the "Add to list" button.
+
+Expected Result:
+The car is added to the customer's card.
+
+
